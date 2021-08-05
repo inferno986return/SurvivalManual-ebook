@@ -180,23 +180,23 @@ h4.heading
 
 h1.toc
 {
-	margin-top: 1.1em;
+	margin-top: 0.5em;
 	margin-bottom: 0em;
 	text-indent: 1em;
 	font-size: 1.2em;
-	font-family: serif;
+	font-family: sans-serif;
 	font-weight: normal;
-	font-variant: small-caps;
+	font-variant: normal;
 }
 
 h2.toc
 {
 	margin: 0em;
-	text-indent: 1em;
+	text-indent: 2em;
 	font-size: 1.2em;
-	font-family: serif;
+	font-family: sans-serif;
 	font-weight: normal;
-	font-variant: small-caps;
+	font-variant: normal;
 }
 
 h3.toc
