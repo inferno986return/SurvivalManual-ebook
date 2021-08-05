@@ -287,7 +287,7 @@ h1.motleypress-heading
 p
 {
 	font-size: 1em;
-	font-family: serif;
+	font-family: sans-serif;
 	margin: 0px 0em 0em 0em;
 	text-align: justify;
 	text-indent: 1em;
@@ -683,9 +683,10 @@ div.title-page
   margin-bottom: 0em;
 }
 
-div.red-box
+div.greybox
 {
-	border-style: solid #D31F26 3px;
+	border: solid #000 2px;
+	background-color: #D3D3D3;
 	padding: 1em;
 }
 
