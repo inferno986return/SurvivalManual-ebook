@@ -183,7 +183,7 @@ h1.toc
 	margin-top: 0.5em;
 	margin-bottom: 0em;
 	text-indent: 1em;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-family: sans-serif;
 	font-weight: normal;
 	font-variant: normal;
@@ -193,7 +193,7 @@ h2.toc
 {
 	margin: 0em;
 	text-indent: 2em;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-family: sans-serif;
 	font-weight: normal;
 	font-variant: normal;
@@ -551,14 +551,14 @@ ol, ul
 {
   margin-top: 1em;
   margin-bottom: 1em;
-	font-family: serif;
 }
 
 li
 {
-  margin-bottom: 0em;
+  	margin-bottom: 0em;
+  	font-family: sans-serif;
 	font-variant-numeric: tabular-nums; /*Force cap-height proportional numbers for fonts that use default text figures such as Literata or Georgia.*/
-  hyphens: none;
+ 	hyphens: none;
 }
 
 ul.nomargin, ol.nomargin
