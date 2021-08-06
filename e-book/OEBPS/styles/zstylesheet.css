@@ -649,11 +649,9 @@ p.image, .image
 	/*border: solid 1px;*/
 }
 
-img.rose
+img.toc_icon
 {
-  width: 125px;
-  height: 125px;
-  vertical-align: middle;
+ margin-right: 0.5em;
 }
 
 /*Book-specific divs*/
