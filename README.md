@@ -5,9 +5,28 @@ Community-created survival manual based on the public domain [US Army Survival F
 
 Content provided by: https://github.com/ligi/SurvivalManual
 
-I have started this project by adding the wiki folder where I have used git clone to copy across the contents of the wiki. The wiki was last edited on the 3rd July 2018.
+I have started this project by adding the wiki folder where I have used git clone to copy across the contents of the wiki. The wiki was last edited in 2020.
 
-The app itself is licenced under GNU GPLv3.
+
+## What's changed
+
+Most of the content will be kept the same though I plan on making minor alterations (see the ConversionNotes.md for more information). I have already changed the Psychology chapter icon for a more appropriate one, along with alterations to the typesetting. One image will likely be replaced with just a table.
+
+The icon source files are saved in the .afdesign format used by [Affinity Designer](https://affinity.serif.com/designer).
+
+## E-book
+
+The ePub contents are in the e-book folder. The metadata.json hold the metadata that is used to create the content.opf and toc.ncx files. Currently, ebookbuild on creates ePub 2.0.1 files.
+
+When I have finished the e-book it can be compiled. To compile the ePub, you will need to install both [Python 3](https://www.python.org/) to create the ePub and the [Java Development Kit (JDK)](https://www.oracle.com/uk/java/technologies/javase-downloads.html) to run epubcheck to verify it is up to standard.
+
+Compile an ePub with the following command in Bash (I recommend WSL+Ubuntu for Windows users) while in the e-book folder: `python3 ebookbuild.py && java -jar epubcheck.jar LigiSurvivalManual.epub`
+
+
+## Licencing
+TGoogle Material UI icons are licenced under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+
+The app itself is licenced under [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 The content looks to be licenced under a BSD-style licence, though I need to get this clarified by the original developer.
 
