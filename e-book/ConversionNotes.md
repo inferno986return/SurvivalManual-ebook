@@ -4,3 +4,4 @@
 * In Power, I have used an ordered list at the top for the two items and unordered lists to replace the codeboxes (unneccessary here).
 * Corrected "Psycology" typo in the Apps chapter.
 * In Medicine, the figure 4-1 image is not available on the wiki, but is on the app. What's going on there?
+* In Water, corrected "dehydrate" typo in the fluids table (I also need to get a proper table CSS class going there)
