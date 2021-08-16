@@ -642,11 +642,11 @@ p.image, .image
 
 .figure-caption
 {
-	margin-bottom: 1em;
 	font-size: 1em;
-	text-align: center !important;
-	color: #434343;
-	/*border: solid 1px;*/
+	text-align: center;
+	color: #000;
+	font-weight: bold;
+	margin-top: 0em;
 }
 
 img.toc_icon
@@ -686,6 +686,8 @@ div.greybox
 	border: solid #000 2px;
 	background-color: #D3D3D3;
 	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 div.indicia-warning

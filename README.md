@@ -18,7 +18,7 @@ The icon source files are saved in the .afdesign format used by [Affinity Design
 
 The ePub contents are in the e-book folder. The metadata.json hold the metadata that is used to create the content.opf and toc.ncx files. Currently, ebookbuild on creates ePub 2.0.1 files.
 
-The files are manually edited using the free Microsoft Visual Studio Code text editor with regular expressions. The syntax is identical to the Atom editor. For each chapter I copy the from line 1 to the first `<div>` tag.
+The files are manually edited using the free Microsoft Visual Studio Code text editor with regular expressions. The syntax is identical to the Atom editor. For each chapter I copy the XHTML declaration from line 1 to the first `<div>` tag on line 9.
 
 When I have finished the e-book it can be compiled. To compile the ePub, you will need to install both [Python 3](https://www.python.org/) to create the ePub and the [Java Development Kit (JDK)](https://www.oracle.com/uk/java/technologies/javase-downloads.html) to run epubcheck to verify it is up to standard.
 
