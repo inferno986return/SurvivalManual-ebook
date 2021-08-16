@@ -13,9 +13,9 @@ Use ems instead of percentages.
 
 @font-face
 {
-  font-family: "jb_mono_regular";	font-style: normal;
+  font-family: "Roboto Slab Bold";	font-style: normal;
   font-weight: normal;
-  src: url("../fonts/JetBrainsMonoNL-Regular.ttf");
+  src: url("../fonts/RobotoSlab-Bold.ttf");
 }
 
 /*Cover*/
@@ -133,13 +133,13 @@ h2.indicia-heading
 
 h1.heading
 {
-	font-size: 1.5em;
-	font-family: serif;
+	font-size: 1.7em;
+	font-family: "Roboto Slab Bold", serif;
 	font-weight: bold;
 	text-align: center;
 	color: #000;
 	margin-top: 0.75em;
-	margin-bottom: 0.3em;
+	margin-bottom: 1em;
 }
 
 h2.heading
