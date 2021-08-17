@@ -18,11 +18,35 @@ The icon source files are saved in the .afdesign format used by [Affinity Design
 
 The ePub contents are in the e-book folder. The metadata.json hold the metadata that is used to create the content.opf and toc.ncx files. Currently, ebookbuild on creates ePub 2.0.1 files.
 
-The files are manually edited using the free Microsoft Visual Studio Code text editor with regular expressions. The syntax is identical to the Atom editor. For each chapter I copy the XHTML declaration from line 1 to the first `<div>` tag on line 9.
+The files are manually edited using the free Microsoft Visual Studio Code text editor with regular expressions (regex). The syntax is identical to the Atom editor. The regex syntax used here is as follows:
+
+* `(.+?)` the dot-plus-question mark combined will search any text and the brackets are used to save it into a register so that the text input can be put back when replaced
+* `$1` the dollar symbol (or backslash in Notepad++) is used along with a number to retrieve the saved data in the register. Each pair of brackets represents another register.
+* `\t` used to find or create a tabbed indentation (equivalent of pressing the tab key)
+* `\n` used to find or create a newline (equivalent of pressing the return/enter key)
+* `\s` used to find or create a space (equivalent of pressing the spacebar)
+* `\` the backslash on its own is used to tell regex that you are manipulating an actual character, such as a `.`, `+`, `?`, `*`.
+
+For each chapter I do the following:
+
+1. I copy the XHTML declaration from line 1 to the first `<div>` tag on line 9.
+2. Use regex to make every opening `<blockquote>` as a `<div>`.
+3. Use regex to add the noindent top class to each `<p>` tag with this in the search, then replace: `<p>(.+?)</p>` `\t<p class="noindent top>$1</p>\n\n`
+4. Use regex to add a tab for the heading tags: `<h3>` `\t<h3>`
+5. Use regex to add the images and fix the tags:
+6. Use regex to add the figure caption class below the images: `<p class="noindent top"><b>Figure(.+?)</b></p>` `<p class="figure-caption">Figure$1</p>`
+7. Use regex to fix the bold `<strong>(.+?)</strong>` `<b>(.+?)</b>` and italic `<em>(.+?)</em>` `<i>(.+?)</i>` tags.
+8. Use regex to fix the opening tag for unordered lists: `<ul>` `\t<ul>`
+9. Use regex to indent the list tags: `<li>` `\t\t<li>`
+10. Use regex to fix the closing tag for unordered lists: `</ul>` `\t</ul>`
+11. For chapters that have lists within paragraphs, escape the asterisk `\*\s(.+?)\.` and then add the list tags `<li>$1.</li>`
+12. ...
+
+If you are unsure about something feel free to add it to the ConversionNotes.md, better yet try raising an issue on this repository!
 
 When I have finished the e-book it can be compiled. To compile the ePub, you will need to install both [Python 3](https://www.python.org/) to create the ePub and the [Java Development Kit (JDK)](https://www.oracle.com/uk/java/technologies/javase-downloads.html) to run epubcheck to verify it is up to standard.
 
-Compile an ePub with the following command in Bash (I recommend WSL+Ubuntu for Windows users) while in the e-book folder: `python3 ebookbuild.py && java -jar epubcheck.jar LigiSurvivalManual.epub`
+Compile an ePub with the following command in Bash (I recommend installing WSL+Ubuntu for Windows 10 users) while in the e-book folder: `python3 ebookbuild.py && java -jar epubcheck.jar LigiSurvivalManual.epub`
 
 
 ## Licencing
