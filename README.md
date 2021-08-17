@@ -15,8 +15,9 @@ Most of the content will be kept the same though I plan on making minor alterati
 The icon source files are saved in the .afdesign format used by [Affinity Designer](https://affinity.serif.com/designer). I may move this over to [Inkscape](https://inkscape.org) to make the project more accessible.
 
 ## E-book
+**The e-book is currently in development and does not compile.**
 
-The ePub contents are in the e-book folder. The metadata.json hold the metadata that is used to create the content.opf and toc.ncx files. Currently, ebookbuild on creates ePub 2.0.1 files.
+The ePub contents are in the e-book folder. The metadata.json (which needs to be completed) holds the metadata that is used to create the content.opf and toc.ncx files. Currently, ebookbuild creates ePub 2.0.1 files (with plans to support the latest ePub 3 version in the future).
 
 The files are manually edited using the free Microsoft Visual Studio Code text editor with regular expressions (regex). The syntax is identical to the Atom editor. The regex syntax used here is as follows:
 
@@ -31,8 +32,8 @@ For each chapter I do the following:
 
 1. I copy the XHTML declaration from line 1 to the first `<div>` tag on line 9.
 2. Use regex to make every opening `<blockquote>` as a `<div>`.
-3. Use regex to add the noindent top class to each `<p>` tag with this in the search, then replace: `<p>(.+?)</p>` `\t<p class="noindent top>$1</p>\n\n`
-4. Use regex to add a tab for the heading tags: `<h3>` `\t<h3>`
+3. Use regex to add the noindent top class to each `<p>` tag with this in the search, then replace: `<p>(.+?)</p>` `\t<p class="noindent top">$1</p>\n`
+4. Use regex to add a tab and newline for the heading tags: `<h3 id="(.+?)">(.+?)</h3>` `\t<h3 id="$1">$2</h3>\n`
 5. Use regex to add the images and fix the tags:
 6. Use regex to add the figure caption class below the images: `<p class="noindent top"><b>Figure(.+?)</b></p>` `<p class="figure-caption">Figure$1</p>`
 7. Use regex to fix the bold `<strong>(.+?)</strong>` `<b>(.+?)</b>` and italic `<em>(.+?)</em>` `<i>(.+?)</i>` tags.
@@ -42,7 +43,7 @@ For each chapter I do the following:
 11. For chapters that have lists within paragraphs, escape the asterisk `\*\s(.+?)\.` and then add the list tags `<li>$1.</li>`
 12. ...
 
-If you are unsure about something feel free to add it to the ConversionNotes.md, better yet try raising an issue on this repository!
+The metadata will need to be added to the metadata.json file which is used by ebookbuild script to compile the book.
 
 When I have finished the e-book it can be compiled. To compile the ePub, you will need to install both [Python 3](https://www.python.org/) to create the ePub and the [Java Development Kit (JDK)](https://www.oracle.com/uk/java/technologies/javase-downloads.html) to run epubcheck to verify it is up to standard.
 

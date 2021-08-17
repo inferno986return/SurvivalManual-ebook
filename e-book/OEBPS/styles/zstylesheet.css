@@ -580,28 +580,48 @@ p.sublist, .sublist
 /*Tables*/
 table
 {
-  margin-top: 2em;
-  margin-bottom: 2em;
+	width: 100%;
 	border-collapse: collapse;
 	border-style: solid #000 0.1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
-td, th
+td
 {
 	text-indent: 0em !important;
-  padding-left: 0.2em;
-  padding-right: 0.2em;
-  padding-top: 0.2em;
-  margin-left: 0em;
-  margin-right: 0em;
-  vertical-align: top;
-  text-align: center;
-  page-break-inside: avoid;
-  hyphens: none;
-  font-size: 0.9em;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	padding-top: 0.2em;
+	margin-left: 0em;
+	margin-right: 0em;
+	vertical-align: top;
+	text-align: center;
+	page-break-inside: avoid;
+	hyphens: none;
+	font-size: 0.9em;
 	border: solid #000 0.2em;
-  font-variant-numeric: tabular-nums;
-  font-family: serif;
+	font-variant-numeric: tabular-nums;
+	font-family: sans-serif;
+}
+
+th
+{
+	text-indent: 0em !important;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	padding-top: 0.2em;
+	margin-left: 0em;
+	margin-right: 0em;
+	vertical-align: top;
+	text-align: center;
+	page-break-inside: avoid;
+	hyphens: none;
+	font-size: 0.9em;
+	border: solid #000 0.2em;
+	font-variant-numeric: tabular-nums;
+	font-family: sans-serif;
+	font-weight: bold;
 }
 
 table.indicia-table
