@@ -8,3 +8,4 @@
 * In Water, corrected "dehydrate" typo in the fluids table (I also need to get a proper table CSS class going there)
 * In Food, added an ordered list for several lists that were marked with an asterisk including the fish poisoning list.
 * In Food, why is each paragraph numbered? Have the paragraphs just been copied verbatim from the original US Army FM guide?
+* In Desert, there are also paragraph numbers like with the Food chapter.
