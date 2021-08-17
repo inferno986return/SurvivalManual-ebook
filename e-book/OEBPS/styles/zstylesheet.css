@@ -690,6 +690,15 @@ div.greybox
 	margin-bottom: 1em;
 }
 
+div.warningbox
+{
+	border: solid #000 2px;
+	background-color: #F8DE7E;
+	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
 div.indicia-warning
 {
 	border-style: solid;
