@@ -9,3 +9,7 @@
 * In Food, added an ordered list for several lists that were marked with an asterisk including the fish poisoning list.
 * In Food, why is each paragraph numbered? Have the paragraphs just been copied verbatim from the original US Army FM guide?
 * In Desert, there are also paragraph numbers like with the Food chapter.
+* In Tropical, the tree level diagram has 2 ordinal typos.
+* In Tropical and Sea, reworded the "Chapter Water" and "Chapter Food" references to flow better in English.
+* In Cold, there are also paragraph numbers.
+* In Cold, changed the appearance of the 4 principles of keeping warm. Each letter is bold and separated from the paragraphs following it clearly. I plan on making these standout more.

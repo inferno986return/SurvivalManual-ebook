@@ -543,6 +543,12 @@ span.initial-black, .initial-black
 	font-family: "jb_mono_regular", monospace;
 }
 
+.acrostic /*For acrostic acronyms, to give emphasis*/
+{
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
 /*Text Alignment*/
 
 /*Lists (Ordered and Unordered)*/
