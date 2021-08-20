@@ -561,10 +561,11 @@ ol, ul
 
 li
 {
-  	margin-bottom: 0em;
   	font-family: sans-serif;
 	font-variant-numeric: tabular-nums; /*Force cap-height proportional numbers for fonts that use default text figures such as Literata or Georgia.*/
  	hyphens: none;
+	margin-top: 0.25em;
+	margin-bottom: 0em;
 }
 
 ul.nomargin, ol.nomargin
@@ -642,8 +643,9 @@ table.indicia-table
 
 div.image-center, .image-center
 {
-	max-width: 100%
+	max-width: 100%;
 	/*border: solid 2px; Useful for debugging.*/
+	margin-top: 1em;
 }
 
 .image-left
@@ -714,6 +716,16 @@ div.greybox
 	padding: 1em;
 	margin-top: 1em;
 	margin-bottom: 1em;
+}
+
+div.whitebox
+{
+	border: solid #000 2px;
+	background-color: none;
+	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+
 }
 
 div.warningbox
