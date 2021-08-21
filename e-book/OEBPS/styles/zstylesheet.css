@@ -113,7 +113,7 @@ h1.indicia-heading
 {
 	text-align: center;
 	font-size: 1em; /*small works best here rather than a specific em*/
-	font-family: serif;
+	font-family: sans-serif;
 	font-weight: bold;
 	margin-bottom: 1em;
 }
@@ -292,12 +292,13 @@ p
 	text-align: justify;
 	text-indent: 1em;
 	hyphens: none;
-  font-variant-numeric: tabular-nums; /*Force cap-height proportional numbers for fonts that use default text figures such as Literata or Georgia.*/
+  	font-variant-numeric: tabular-nums; /*Force cap-height proportional numbers for fonts that use default text figures such as Literata or Georgia.*/
 }
 
 p.indicia, .indicia
 {
-  font-size: 0.8em !important; /*0.8em or small*/
+  	font-size: 0.8em !important; /*0.8em or small*/
+	font-family: sans-serif;
 	text-indent: 1em !important;
 	font-variant-numeric: tabular-nums; /*Force cap-height proportional numbers for fonts that use default text figures such as Literata or Georgia.*/
 }
@@ -305,6 +306,7 @@ p.indicia, .indicia
 p.noindent-indicia, .noindent-indicia
 {
 	font-size: 0.8em !important; /*0.8em or small*/
+	font-family: sans-serif;
 	text-indent: 0em !important;
 	text-align: left !important;
 	font-variant-numeric: tabular-nums; /*Force cap-height tabular numbers for fonts that use default text figures such as Literata or Georgia.*/
@@ -312,9 +314,10 @@ p.noindent-indicia, .noindent-indicia
 
 p.center-indicia, .center-indicia
 {
-  font-size: 0.8em !important; /*0.8em or small*/
-  text-align: center !important;
-  font-variant-numeric: tabular-nums; /*Force cap-height tabular numbers for fonts that use default text figures such as Literata or Georgia.*/
+  	font-size: 0.8em !important; /*0.8em or small*/
+	font-family: sans-serif;
+  	text-align: center !important;
+  	font-variant-numeric: tabular-nums; /*Force cap-height tabular numbers for fonts that use default text figures such as Literata or Georgia.*/
 }
 
 p.small-text, .small-text /*For the indicia*/
@@ -375,9 +378,9 @@ p.left, .left
 p.center, .center
 {
 	text-align: center !important;
-  text-indent: 0em !important;
-  margin-left: 5%;
-  margin-right: 5%;
+  	text-indent: 0em !important;
+	margin-left: 5%;
+  	margin-right: 5%;
 }
 
 p.right, .right
@@ -397,17 +400,17 @@ p.mono, .mono
 
 p.location
 {
-  text-align: center;
-  font-size: 0.95em;
-  text-indent: -2em;
-  margin-top: 1em;
+  	text-align: center;
+  	font-size: 0.95em;
+  	text-indent: -2em;
+  	margin-top: 1em;
 }
 
 p.location2
 {
-  text-align: center;
-  text-indent: 2em;
-  font-size: 0.95em;
+  	text-align: center;
+  	text-indent: 2em;
+  	font-size: 0.95em;
 }
 
 /*Quotes*/

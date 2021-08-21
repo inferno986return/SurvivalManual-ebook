@@ -50,7 +50,7 @@ For each chapter I do the following:
 4. Use regex to add a tab and newline for the heading tags: `<h3 id="(.+?)">(.+?)</h3>` `\t<h3 id="$1">$2</h3>\n`
 5. Use regex to add the images and fix the tags: `<p class="noindent top"><a name="(.+?)"></a><img src="(.+?)" alt="(.+?)" /></p>` `<p class="center top"><img id="$1" src="$2" alt="$3"/></p>`
 6. Use regex to add the figure caption class below the images: `<p class="noindent top"><b>Figure(.+?)</b></p>` `<p class="figure-caption">Figure$1</p>`
-7. Use regex to fix the bold `<strong>(.+?)</strong>` `<b>(.+?)</b>` and italic `<em>(.+?)</em>` `<i>(.+?)</i>` tags.
+7. Use regex to fix the bold `<strong>(.+?)</strong>` `<b>$1</b>` and italic `<em>(.+?)</em>` `<i>$1</i>` tags.
 8. Use regex to fix the opening tag for unordered lists: `<ul>` `\t<ul>`
 9.  Use regex to indent the list tags: `<li>` `\t\t<li>`
 10. Use regex to fix the closing tag for unordered lists: `</ul>` `\t</ul>`
