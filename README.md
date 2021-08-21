@@ -7,6 +7,20 @@ Content provided by: https://github.com/ligi/SurvivalManual
 
 I have started this project by adding the wiki folder where I have used git clone to copy across the contents of the wiki. The wiki was last edited in 2020.
 
+## Foreword
+
+*“You’re not taking into consideration the most important human element of all; the will to live. Until a person is faced with death, it’s impossible to tell whether they have what it takes to survive.”*
+— **John Kramer, Saw VI**
+
+This is an effort to make Ligi’s survival manual more accessible by making it available as an ePub. The ePub is a popular e-book file format that can be read using popular apps such as Adobe Digital Editions and Google Play Books. Alternatively, the ePub file can also be converted to the Kindle format using Calibre or Kindle Previewer. The e-ink Kindle Paperwhite e-readers have a very long battery life that can last days or even weeks depending on usage. Its low power requirements are something to consider if you can get a generator working as described in the Power chapter.
+
+The ultimate intention of this is project is to provide the survival manual as a printable PDF, then possibly as a physical book. A printed survival manual would be more practical because it does not require power and is more resilient to the elements. It is also unlikely to abruptly fail, which can happen to electronic devices such as a smartphone, tablet or e-reader.
+
+I have included all the content from Ligi’s survival manual wiki as of last edit on the 5<sup>th</sup> February 2021. I want to maintain parity with the source as it gets updated with new or amended information – so do let me know if I am missing anything.
+
+My own inspiration for this printed guide is the 2014 edition of the “SAS Survival Handbook: The Definitive Survival Guide” (ISBN: 978-0007595860) by John ‘Lofty’ Wiseman, a former SAS member and survival expert. In the preface the author explains is the importance of three key aspects neccessary for survival which are the skills you have learnt, the equipment you have (kit) and the will to live. This demonstrates the importance of having the correct mindset in a life or death situation.
+
+The SAS Survival Guide is also useful for obtaining inspiration for creating effective typesetting for the survival manual. I like the typesetter’s use of grey boxes for showing important information and the circular icons on the contents page. An effective survival manual needs to be easy to read and all warnings should be easy to see.
 
 ## What's changed
 
@@ -48,7 +62,6 @@ The metadata will need to be added to the metadata.json file which is used by eb
 When I have finished the e-book it can be compiled. To compile the ePub, you will need to install both [Python 3](https://www.python.org/) to create the ePub and the [Java Development Kit (JDK)](https://www.oracle.com/uk/java/technologies/javase-downloads.html) to run epubcheck to verify it is up to standard.
 
 Compile an ePub with the following command in Bash (I recommend installing WSL+Ubuntu for Windows 10 users) while in the e-book folder: `python3 ebookbuild.py && java -jar epubcheck.jar LigiSurvivalManual.epub`
-
 
 ## Licencing
 The Google Material UI icons are licenced under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).

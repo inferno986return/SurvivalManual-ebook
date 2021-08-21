@@ -220,10 +220,10 @@ h1.indent, h2.indent
 h1.subheading
 {
 	font-size: 1em;
-	font-family: serif;
-	font-weight: normal;
+	font-family: sans-serif;
+	font-weight: bold;
 	margin-top: 1em;
-  margin-bottom: 0em;
+  	margin-bottom: 0em;
 }
 
 h2.subheading
