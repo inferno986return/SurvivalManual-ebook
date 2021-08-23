@@ -19,3 +19,5 @@
 * In Cold, the windchill table is so large I have made cover the whole width of the page.
 * In Cold, changed the appearance of the 4 principles of keeping warm. Each letter is bold and separated from the paragraphs following it clearly. I plan on making these standout more.
 * In Sea, changed the five As list from unordered to ordered.
+
+* In MultiTool, added that it's also referred to as a penknife. Particularly in British English.
