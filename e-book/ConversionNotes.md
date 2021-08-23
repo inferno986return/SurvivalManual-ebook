@@ -26,3 +26,5 @@
 * In Man-Made Hazards, added acronym for NATO.
 * In Credits, minor gramattical changes such as adding a full-stop to the last paragraph and removing spaces between parantheses.
 * In MultiTool, added that it's also referred to as a penknife. Particularly in British English.
+* In FAQ, capitalised Samsung as it's a proper noun.
+* In Poisonous Plants, add the scientific names in italics.
