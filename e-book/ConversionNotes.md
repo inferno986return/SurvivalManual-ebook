@@ -26,8 +26,12 @@
 * In Sea, changed the five As list from unordered to ordered.
 * In Man-Made Hazards, added acronym for NATO.
 * In Credits, minor gramattical changes such as adding a full-stop to the last paragraph and removing spaces between parantheses.
+
+### Appendices
 * In MultiTool, added that it's also referred to as a penknife. Particularly in British English. Also made "recommendation" lowercase.
 * In MultiTool, made inappropriate hyphens as en dashes.
 * In FAQ, capitalised Samsung as it's a proper noun.
 * In Poisonous Plants, add the scientific names in italics.
+* In Poisonous Plants, would be better to add a table with a description of what these plants are and where they are found in the world.
+* In Poisonous Plants, added the foxglove to poisonous via ingestion section. I should also add the hogweed plant.
 * In Translator Notes, tidied up some grammar and replaced hyphens with en dashes.
