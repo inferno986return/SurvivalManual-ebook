@@ -25,7 +25,7 @@
 * In Cold, changed the appearance of the 4 principles of keeping warm. Each letter is bold and separated from the paragraphs following it clearly. I plan on making these standout more.
 * In Sea, changed the five As list from unordered to ordered.
 * In Man-Made Hazards, added acronym for NATO.
-* In Credits, minor gramattical changes such as adding a full-stop to the last paragraph and removing spaces between parantheses.
+* In Credits, minor grammatical changes such as adding a full-stop to the last paragraph and removing spaces between parantheses.
 
 ### Appendices
 * In MultiTool, added that it's also referred to as a penknife. Particularly in British English. Also made "recommendation" lowercase.
@@ -34,4 +34,5 @@
 * In Poisonous Plants, add the scientific names in italics.
 * In Poisonous Plants, would be better to add a table with a description of what these plants are and where they are found in the world.
 * In Poisonous Plants, added the foxglove to poisonous via ingestion section. I should also add the hogweed plant.
+* Comparing this Poisonous Plants chapter to the FM original shows descriptions and images, as well as more plants. More information should be taken from there.
 * In Translator Notes, tidied up some grammar and replaced hyphens with en dashes.

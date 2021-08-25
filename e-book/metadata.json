@@ -48,10 +48,64 @@
 						"fileName": "title.xhtml"
 					},
 					{
-						"pageNumber": "6",
+						"pageNumber": "3",
+						"indentation": "1",
+						"pageName": "Epigraph",
+						"fileName": "epigraph.xhtml"
+					},
+					{
+						"pageNumber": "4",
 						"indentation": "1",
 						"pageName": "Contents",
 						"fileName": "toc.xhtml"
+					},
+					{
+						"pageNumber": "5",
+						"indentation": "1",
+						"pageName": "Foreword",
+						"fileName": "foreword.xhtml"
+					},
+					{
+						"pageNumber": "6",
+						"indentation": "1",
+						"pageName": "Introduction",
+						"fileName": "introduction.xhtml"
+					},
+					{
+						"pageNumber": "7",
+						"indentation": "1",
+						"pageName": "Psychology",
+						"fileName": "psychology.xhtml"
+					},
+					{
+						"pageNumber": "8",
+						"indentation": "1",
+						"pageName": "Power",
+						"fileName": "power.xhtml"
+					},
+					{
+						"pageNumber": "9",
+						"indentation": "1",
+						"pageName": "Planning",
+						"fileName": "planning.xhtml"
+					},
+					{
+						"pageNumber": "10",
+						"indentation": "1",
+						"pageName": "Kits",
+						"fileName": "kits.xhtml"
+					},
+					{
+						"pageNumber": "11",
+						"indentation": "1",
+						"pageName": "Apps",
+						"fileName": "apps.xhtml"
+					},
+					{
+						"pageNumber": "12",
+						"indentation": "1",
+						"pageName": "Basic Medicine",
+						"fileName": "basicmedicine.xhtml"
 					}
 				]
 }
