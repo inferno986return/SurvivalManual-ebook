@@ -5,7 +5,7 @@
 		<dc:subject></dc:subject>
 		<dc:publisher></dc:publisher>
 		<dc:identifier id="bookid">-</dc:identifier>
-		<dc:date>2021-08-26T10:17:38</dc:date>
+		<dc:date>2021-08-26T12:29:51</dc:date>
 		<dc:language>en</dc:language>
 		<dc:rights>worldwide</dc:rights>
 		<meta content="cover" name="cover"/>
@@ -204,7 +204,6 @@
 		<item href="animals.xhtml" id="animals" media-type="application/xhtml+xml"/>
 		<item href="tools.xhtml" id="tools" media-type="application/xhtml+xml"/>
 		<item href="desert.xhtml" id="desert" media-type="application/xhtml+xml"/>
-		<item href="tools.xhtml" id="tools" media-type="application/xhtml+xml"/>
 		<item href="tropical.xhtml" id="tropical" media-type="application/xhtml+xml"/>
 		<item href="coldweather.xhtml" id="coldweather" media-type="application/xhtml+xml"/>
 		<item href="sea.xhtml" id="sea" media-type="application/xhtml+xml"/>
@@ -248,7 +247,6 @@
 		<itemref idref="animals"/>
 		<itemref idref="tools"/>
 		<itemref idref="desert"/>
-		<itemref idref="tools"/>
 		<itemref idref="tropical"/>
 		<itemref idref="coldweather"/>
 		<itemref idref="sea"/>
