@@ -106,6 +106,174 @@
 						"indentation": "1",
 						"pageName": "Basic Medicine",
 						"fileName": "basicmedicine.xhtml"
+					},
+					{
+						"pageNumber": "13",
+						"indentation": "1",
+						"pageName": "Shelter",
+						"fileName": "shelter.xhtml"
+					},
+					{
+						"pageNumber": "14",
+						"indentation": "1",
+						"pageName": "Water Procurement",
+						"fileName": "water.xhtml"
+					},
+					{
+						"pageNumber": "15",
+						"indentation": "1",
+						"pageName": "Firecraft",
+						"fileName": "firecraft.xhtml"
+					},
+					{
+						"pageNumber": "16",
+						"indentation": "1",
+						"pageName": "Food Procurement",
+						"fileName": "food.xhtml"
+					},
+					{
+						"pageNumber": "17",
+						"indentation": "1",
+						"pageName": "Plants",
+						"fileName": "plants.xhtml"
+					},
+					{
+						"pageNumber": "18",
+						"indentation": "1",
+						"pageName": "Dangerous Animals",
+						"fileName": "animals.xhtml"
+					},
+					{
+						"pageNumber": "19",
+						"indentation": "1",
+						"pageName": "Tools and Equipment",
+						"fileName": "tools.xhtml"
+					},
+					{
+						"pageNumber": "20",
+						"indentation": "1",
+						"pageName": "Desert",
+						"fileName": "desert.xhtml"
+					},
+					{
+						"pageNumber": "21",
+						"indentation": "1",
+						"pageName": "Tools and Equipment",
+						"fileName": "tools.xhtml"
+					},
+					{
+						"pageNumber": "22",
+						"indentation": "1",
+						"pageName": "Tropical",
+						"fileName": "tropical.xhtml"
+					},
+					{
+						"pageNumber": "23",
+						"indentation": "1",
+						"pageName": "Cold Weather",
+						"fileName": "coldweather.xhtml"
+					},
+					{
+						"pageNumber": "24",
+						"indentation": "1",
+						"pageName": "Sea",
+						"fileName": "sea.xhtml"
+					},
+					{
+						"pageNumber": "25",
+						"indentation": "1",
+						"pageName": "Expedient Water Crossing",
+						"fileName": "watercrossing.xhtml"
+					},
+					{
+						"pageNumber": "26",
+						"indentation": "1",
+						"pageName": "Field-Expedient Direction Finding",
+						"fileName": "directionfinding.xhtml"
+					},
+					{
+						"pageNumber": "27",
+						"indentation": "1",
+						"pageName": "Signaling Techniques",
+						"fileName": "signaling.xhtml"
+					},
+					{
+						"pageNumber": "28",
+						"indentation": "1",
+						"pageName": "Self-defense",
+						"fileName": "self-defense.xhtml"
+					},
+					{
+						"pageNumber": "29",
+						"indentation": "1",
+						"pageName": "Hostile Areas",
+						"fileName": "hostileareas.xhtml"
+					},
+					{
+						"pageNumber": "30",
+						"indentation": "1",
+						"pageName": "Camouflage",
+						"fileName": "camouflage.xhtml"
+					},
+					{
+						"pageNumber": "31",
+						"indentation": "1",
+						"pageName": "Contact with People",
+						"fileName": "contactpeople.xhtml"
+					},
+					{
+						"pageNumber": "32",
+						"indentation": "1",
+						"pageName": "Man-Made Hazards",
+						"fileName": "manmadehazards.xhtml"
+					},
+					{
+						"pageNumber": "33",
+						"indentation": "1",
+						"pageName": "Credits",
+						"fileName": "credits.xhtml"
+					},
+					{
+						"pageNumber": "34",
+						"indentation": "1",
+						"pageName": "Appendix: Poisonous Plants",
+						"fileName": "appendix-poisonousplants.xhtml"
+					},
+					{
+						"pageNumber": "35",
+						"indentation": "1",
+						"pageName": "Appendix: Dangerous Arthropods",
+						"fileName": "appendix-dangerousarthropods.xhtml"
+					},
+					{
+						"pageNumber": "36",
+						"indentation": "1",
+						"pageName": "Appendix: Dangerous Fish and Mollusks",
+						"fileName": "appendix-dangerousfishmollusks.xhtml"
+					},
+					{
+						"pageNumber": "37",
+						"indentation": "1",
+						"pageName": "Appendix: Ropes and Knots",
+						"fileName": "appendix-ropesandknots.xhtml"
+					},
+					{
+						"pageNumber": "38",
+						"indentation": "1",
+						"pageName": "Appendix: MultiTool",
+						"fileName": "appendix-multitool.xhtml"
+					},
+					{
+						"pageNumber": "39",
+						"indentation": "1",
+						"pageName": "Appendix: FAQ",
+						"fileName": "appendix-faq.xhtml"
+					},
+					{
+						"pageNumber": "40",
+						"indentation": "1",
+						"pageName": "Appendix: Translator Notes",
+						"fileName": "appendix-translatornotes.xhtml"
 					}
 				]
 }

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN" "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd"><ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+<head>
+	<meta name="dtb:uid" content="-" />
+	<meta name="dtb:depth" content="1" />
+	<meta name="dtb:totalPageCount" content="0" />
+	<meta name="dtb:maxPageNumber" content="0" />
+</head>
+<docTitle>
+	<text>Survival Manual</text>
+</docTitle>
+<navMap>
+	<navPoint id="navpoint-1" playOrder="1">
+		<navLabel>
+			<text>Front Cover</text>
+		</navLabel>
+		<content src="bookcover.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-2" playOrder="2">
+		<navLabel>
+			<text>Indicia</text>
+		</navLabel>
+		<content src="indicia.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-3" playOrder="3">
+		<navLabel>
+			<text>Title</text>
+		</navLabel>
+		<content src="title.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-4" playOrder="4">
+		<navLabel>
+			<text>Epigraph</text>
+		</navLabel>
+		<content src="epigraph.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-5" playOrder="5">
+		<navLabel>
+			<text>Contents</text>
+		</navLabel>
+		<content src="toc.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-6" playOrder="6">
+		<navLabel>
+			<text>Foreword</text>
+		</navLabel>
+		<content src="foreword.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-7" playOrder="7">
+		<navLabel>
+			<text>Introduction</text>
+		</navLabel>
+		<content src="introduction.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-8" playOrder="8">
+		<navLabel>
+			<text>Psychology</text>
+		</navLabel>
+		<content src="psychology.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-9" playOrder="9">
+		<navLabel>
+			<text>Power</text>
+		</navLabel>
+		<content src="power.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-10" playOrder="10">
+		<navLabel>
+			<text>Planning</text>
+		</navLabel>
+		<content src="planning.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-11" playOrder="11">
+		<navLabel>
+			<text>Kits</text>
+		</navLabel>
+		<content src="kits.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-12" playOrder="12">
+		<navLabel>
+			<text>Apps</text>
+		</navLabel>
+		<content src="apps.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-13" playOrder="13">
+		<navLabel>
+			<text>Basic Medicine</text>
+		</navLabel>
+		<content src="basicmedicine.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-14" playOrder="14">
+		<navLabel>
+			<text>Shelter</text>
+		</navLabel>
+		<content src="shelter.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-15" playOrder="15">
+		<navLabel>
+			<text>Water Procurement</text>
+		</navLabel>
+		<content src="water.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-16" playOrder="16">
+		<navLabel>
+			<text>Firecraft</text>
+		</navLabel>
+		<content src="firecraft.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-17" playOrder="17">
+		<navLabel>
+			<text>Food Procurement</text>
+		</navLabel>
+		<content src="food.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-18" playOrder="18">
+		<navLabel>
+			<text>Plants</text>
+		</navLabel>
+		<content src="plants.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-19" playOrder="19">
+		<navLabel>
+			<text>Dangerous Animals</text>
+		</navLabel>
+		<content src="animals.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-20" playOrder="20">
+		<navLabel>
+			<text>Tools and Equipment</text>
+		</navLabel>
+		<content src="tools.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-21" playOrder="21">
+		<navLabel>
+			<text>Desert</text>
+		</navLabel>
+		<content src="desert.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-22" playOrder="22">
+		<navLabel>
+			<text>Tools and Equipment</text>
+		</navLabel>
+		<content src="tools.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-23" playOrder="23">
+		<navLabel>
+			<text>Tropical</text>
+		</navLabel>
+		<content src="tropical.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-24" playOrder="24">
+		<navLabel>
+			<text>Cold Weather</text>
+		</navLabel>
+		<content src="coldweather.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-25" playOrder="25">
+		<navLabel>
+			<text>Sea</text>
+		</navLabel>
+		<content src="sea.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-26" playOrder="26">
+		<navLabel>
+			<text>Expedient Water Crossing</text>
+		</navLabel>
+		<content src="watercrossing.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-27" playOrder="27">
+		<navLabel>
+			<text>Field-Expedient Direction Finding</text>
+		</navLabel>
+		<content src="directionfinding.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-28" playOrder="28">
+		<navLabel>
+			<text>Signaling Techniques</text>
+		</navLabel>
+		<content src="signaling.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-29" playOrder="29">
+		<navLabel>
+			<text>Self-defense</text>
+		</navLabel>
+		<content src="self-defense.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-30" playOrder="30">
+		<navLabel>
+			<text>Hostile Areas</text>
+		</navLabel>
+		<content src="hostileareas.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-31" playOrder="31">
+		<navLabel>
+			<text>Camouflage</text>
+		</navLabel>
+		<content src="camouflage.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-32" playOrder="32">
+		<navLabel>
+			<text>Contact with People</text>
+		</navLabel>
+		<content src="contactpeople.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-33" playOrder="33">
+		<navLabel>
+			<text>Man-Made Hazards</text>
+		</navLabel>
+		<content src="manmadehazards.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-34" playOrder="34">
+		<navLabel>
+			<text>Credits</text>
+		</navLabel>
+		<content src="credits.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-35" playOrder="35">
+		<navLabel>
+			<text>Appendix: Poisonous Plants</text>
+		</navLabel>
+		<content src="appendix-poisonousplants.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-36" playOrder="36">
+		<navLabel>
+			<text>Appendix: Dangerous Arthropods</text>
+		</navLabel>
+		<content src="appendix-dangerousarthropods.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-37" playOrder="37">
+		<navLabel>
+			<text>Appendix: Dangerous Fish and Mollusks</text>
+		</navLabel>
+		<content src="appendix-dangerousfishmollusks.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-38" playOrder="38">
+		<navLabel>
+			<text>Appendix: Ropes and Knots</text>
+		</navLabel>
+		<content src="appendix-ropesandknots.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-39" playOrder="39">
+		<navLabel>
+			<text>Appendix: MultiTool</text>
+		</navLabel>
+		<content src="appendix-multitool.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-40" playOrder="40">
+		<navLabel>
+			<text>Appendix: FAQ</text>
+		</navLabel>
+		<content src="appendix-faq.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-41" playOrder="41">
+		<navLabel>
+			<text>Appendix: Translator Notes</text>
+		</navLabel>
+		<content src="appendix-translatornotes.xhtml" />
+	</navPoint>
+</navMap>
+</ncx>

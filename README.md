@@ -22,11 +22,17 @@ My own inspiration for this printed guide is the 2014 edition of the “SAS Surv
 
 The SAS Survival Guide is also useful for obtaining inspiration for creating effective typesetting for the survival manual. I like the typesetter’s use of grey boxes for showing important information and the circular icons on the contents page. An effective survival manual needs to be easy to read and all warnings should be easy to see.
 
-## What's changed
+## What's changed?
 
 Most of the content will be kept the same though I plan on making minor alterations (see the ConversionNotes.md for more information). I have already changed the Psychology chapter icon for a more appropriate one, along with alterations to the typesetting. One image will likely be replaced with just a table.
 
 The icon source files are saved in the .afdesign format used by [Affinity Designer](https://affinity.serif.com/designer). I may move this over to [Inkscape](https://inkscape.org) to make the project more accessible.
+
+## What's needed?
+
+* A front cover image
+* Add all the contents icons
+* Apply alterations to upstream (the original guide's wiki)
 
 ## E-book
 **The e-book is currently in development and does not compile.**
