@@ -11,6 +11,7 @@
 
 ## Chapter specific
 * In Introduction, grammatical changes such as removing hyphen from "re-install"
+* In Power, removed hyphens and replaced with appropriate en dashes.
 * In Power, I have used an ordered list at the top for the two items and unordered lists to replace the codeboxes (unneccessary here).
 * In Power, I have ensured each chemical battery type has its full name and common abbreviation in brackets.
 * In Power, I have added two warning boxes to emphasise the dangers of lead-acid and Li-On batteries.

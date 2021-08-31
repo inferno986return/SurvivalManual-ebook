@@ -13,9 +13,25 @@ Use ems instead of percentages.
 
 @font-face
 {
-  font-family: "Roboto Slab Bold";	font-style: normal;
-  font-weight: normal;
+  font-family: "Roboto Slab";	
+  src: url("../fonts/RobotoSlab-Regular.ttf");
+}
+
+@font-face
+{
+  font-family: "Roboto Slab Bold";	
   src: url("../fonts/RobotoSlab-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Roboto";
+	src: url("../fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Roboto Bold";
+	font-weight: bold;
+	src: url("../fonts/Roboto-Bold.ttf");
 }
 
 /*Cover*/
@@ -184,7 +200,7 @@ h1.toc
 	margin-bottom: 0em;
 	text-indent: 1em;
 	font-size: 1.1em;
-	font-family: sans-serif;
+	font-family: "Roboto Slab Regular", sans-serif;
 	font-weight: normal;
 	font-variant: normal;
 }
@@ -194,7 +210,7 @@ h2.toc
 	margin: 0em;
 	text-indent: 2em;
 	font-size: 1.1em;
-	font-family: sans-serif;
+	font-family: "Roboto Slab Regular", sans-serif;
 	font-weight: normal;
 	font-variant: normal;
 }
@@ -219,8 +235,8 @@ h1.indent, h2.indent
 
 h1.subheading
 {
-	font-size: 1em;
-	font-family: sans-serif;
+	font-size: 1.1em;
+	font-family: "Roboto Slab Bold", serif;
 	font-weight: bold;
 	margin-top: 1em;
   	margin-bottom: 0em;
@@ -229,10 +245,10 @@ h1.subheading
 h2.subheading
 {
 	font-size: 1em;
-	font-family: serif;
+	font-family: "Roboto Bold", sans-serif;
 	font-weight: bold;
 	margin-top: 1em;
-  margin-bottom: 0.5em;
+  	margin-bottom: 0em;
 }
 
 h3.subheading
@@ -287,7 +303,7 @@ h1.motleypress-heading
 p
 {
 	font-size: 1em;
-	font-family: sans-serif;
+	font-family: "Roboto", sans-serif;
 	margin: 0px 0em 0em 0em;
 	text-align: justify;
 	text-indent: 1em;
@@ -564,7 +580,7 @@ ol, ul
 
 li
 {
-  	font-family: sans-serif;
+  	font-family: "Roboto", sans-serif;
 	font-variant-numeric: tabular-nums; /*Force cap-height proportional numbers for fonts that use default text figures such as Literata or Georgia.*/
  	hyphens: none;
 	margin-top: 0.25em;
@@ -628,7 +644,7 @@ td
 	font-size: 0.9em;
 	border: solid #000 0.2em;
 	font-variant-numeric: tabular-nums;
-	font-family: sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 th
@@ -644,7 +660,7 @@ th
 	font-size: 0.9em;
 	border: solid #000 0.2em;
 	font-variant-numeric: tabular-nums;
-	font-family: sans-serif;
+	font-family: "Roboto Bold", sans-serif;
 	font-weight: bold;
 }
 

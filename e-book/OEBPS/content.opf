@@ -5,7 +5,7 @@
 		<dc:subject></dc:subject>
 		<dc:publisher></dc:publisher>
 		<dc:identifier id="bookid">-</dc:identifier>
-		<dc:date>2021-08-31T14:13:45</dc:date>
+		<dc:date>2021-08-31T14:43:25</dc:date>
 		<dc:language>en</dc:language>
 		<dc:rights>worldwide</dc:rights>
 		<meta content="cover" name="cover"/>
@@ -225,7 +225,12 @@
 		<item href="appendix-faq.xhtml" id="appendix-faq" media-type="application/xhtml+xml"/>
 		<item href="appendix-translatornotes.xhtml" id="appendix-translatornotes" media-type="application/xhtml+xml"/>
 		<item href="appendix-furtherreading.xhtml" id="appendix-furtherreading" media-type="application/xhtml+xml"/>
-		<item href="fonts/RobotoSlab-Bold.ttf" id="font0" media-type="font/truetype"/>
+		<item href="fonts/Roboto-Bold.ttf" id="font0" media-type="font/truetype"/>
+		<item href="fonts/Roboto-BoldItalic.ttf" id="font1" media-type="font/truetype"/>
+		<item href="fonts/Roboto-Italic.ttf" id="font2" media-type="font/truetype"/>
+		<item href="fonts/Roboto-Regular.ttf" id="font3" media-type="font/truetype"/>
+		<item href="fonts/RobotoSlab-Bold.ttf" id="font4" media-type="font/truetype"/>
+		<item href="fonts/RobotoSlab-Regular.ttf" id="font5" media-type="font/truetype"/>
 	</manifest>
 	<spine toc="ncx">
 		<itemref idref="bookcover"/>
