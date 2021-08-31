@@ -16,6 +16,8 @@
 * In Power, I have added two warning boxes to emphasise the dangers of lead-acid and Li-On batteries.
 * In Power, some minor grammatical changes. Infact I would recommend using Grammarly on this chapter at the upstream.
 * In Apps, corrected "Psycology" typo.
+* In Apps, replaced hyphens with appropriate en dashes.
+* In Apps, added that Morse signal is also known as Morse code.
 * In Apps, added a morse code chart from Wikipedia (and attributed as public domain). Its 372px wide, close to the 350px that many of the other diagrams have.
 * In Apps, made SOS morse code bold and replaced full-stops with bullet symbols, then hyphens with em dashes.
 * In Apps, replaced ASIN for the BioLight camp stove to: B01FWRICY6
@@ -24,8 +26,9 @@
 * In Medicine, the figure 4-1 image is not available on the wiki, but is on the app. What's going on there?
 * In Water, corrected "dehydrate" typo in the fluids table (I also need to get a proper table CSS class going there)
 * In Food, added an ordered list for several lists that were marked with an asterisk including the fish poisoning list.
-* In Food, why is each paragraph numbered? Have the paragraphs just been copied verbatim from the original US Army FM guide?
+* In Food, why is each paragraph numbered? Have the paragraphs just been copied verbatim from the original US Army FM guide? Some numbered paragraphs are hyperlinked so I'll leave them.
 * In Plants, no Fig9-5.
+* In Plants, assigned id="fig9-6" attribute to list for edible plants. Should make this into a table for consistency.
 * In Desert, there are also paragraph numbers like with the Food chapter.
 * In Tropical, the tree level diagram has 2 ordinal typos.
 * In Tropical and Sea, reworded the "Chapter Water" and "Chapter Food" references to flow better in English. Need to make sure this consistent throughout the book.
