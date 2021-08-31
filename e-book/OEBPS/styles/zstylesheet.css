@@ -34,6 +34,18 @@ Use ems instead of percentages.
 	src: url("../fonts/Roboto-Bold.ttf");
 }
 
+@font-face {
+	font-family: "Roboto Italic";
+	font-weight: italic;
+	src: url("../fonts/Roboto-Italic.ttf");
+}
+
+@font-face {
+	font-family: "Roboto Bold-Italic";
+	font-weight: italic;
+	src: url("../fonts/Roboto-BoldItalic.ttf");
+}
+
 /*Cover*/
 
 p.kindle-center
@@ -154,7 +166,7 @@ h1.heading
 	font-weight: bold;
 	text-align: center;
 	color: #000;
-	margin-top: 0.75em;
+	margin-top: 0.5em;
 	margin-bottom: 1em;
 }
 
@@ -427,6 +439,19 @@ p.location2
   	text-align: center;
   	text-indent: 2em;
   	font-size: 0.95em;
+}
+
+/*Emphasis*/
+b
+{
+	font-weight: bold;
+	font-family: "Roboto Bold", sans-serif;
+}
+
+i
+{
+	font-style: italic;
+	font-family: "Roboto Italic", sans-serif;
 }
 
 /*Quotes*/

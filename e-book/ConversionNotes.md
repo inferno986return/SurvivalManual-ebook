@@ -4,15 +4,16 @@
 * Added icons to the Contents. I exported them from the [Material site](https://fonts.google.com/icons) as rounded white icons in the .svg format that are 18dp in size. Looks good with the icon at 11px (tall) and exported to 40px (squared) in total size. These are a work-in-progress, as I plan on making them slightly bigger.
 * Added coloured boxes for warning and caution text throughout the book.
 * Made the tables consistent throughout the book.
-* All the headings will need to be made consistent, I am using the original FM guide to assist with this.
+* All the headings will need to be made consistent, I am using the original FM guide to assist with this. They are of mixed case.
 * Need to replace inappropriate hyphens with en dashes.
 * Need to re-add the Amazon affiliate links in the frontmatter.
-* Removed "<img class="cover-image" src="images/cover.png" alt=""/>" from bookcover. Need to make a JPG cover image.
+* Removed `<img class="cover-image" src="images/cover.png" alt=""/>` from bookcover. Need to make a JPG cover image.
 
 ## Chapter specific
 * In Introduction, grammatical changes such as removing hyphen from "re-install"
 * In Power, removed hyphens and replaced with appropriate en dashes.
 * In Power, I have used an ordered list at the top for the two items and unordered lists to replace the codeboxes (unneccessary here).
+* In Power, made ordinals superscript and made the squared 2, as a superscript 2 because it's easier to read.
 * In Power, I have ensured each chemical battery type has its full name and common abbreviation in brackets.
 * In Power, I have added two warning boxes to emphasise the dangers of lead-acid and Li-On batteries.
 * In Power, some minor grammatical changes. Infact I would recommend using Grammarly on this chapter at the upstream.
@@ -37,13 +38,17 @@
 * In Cold, the windchill table is so large I have made cover the whole width of the page.
 * In Cold, changed the appearance of the 4 principles of keeping warm. Each letter is bold and separated from the paragraphs following it clearly. I plan on making these standout more.
 * In Sea, changed the five As list from unordered to ordered. Then used the acrostic class I made to make them stand out, then added an en dash with the keyword spaced from the accompanying explanation sentence.
+* In Signaling, transcribed the signaling image into the text. Makes it a lot clearer (and searchable).
+* In Self-Defense, moved summary to a whitebox. Looks pretty good.
 * In Man-Made Hazards, added acronym for NATO.
 * In Credits, minor grammatical changes such as adding a full-stop to the last paragraph and removing spaces between parantheses.
 
 ### Appendices
-* In MultiTool, added that it's also referred to as a penknife. Particularly in British English. Also made "recommendation" lowercase.
-* In MultiTool, made inappropriate hyphens as en dashes.
-* In MultiTool, need to re-add the affiliate links as they aren't in the MarkDown, but they are in the app.
+* In Multi-Tool, made the headings consistent.
+* In Multi-Tool added corkscrew to list.
+* In Multi-Tool, added that it's also referred to as a penknife. Particularly in British English. Also made "recommendation" lowercase and capitalised "Swiss". Plus grammatical changes.
+* In Multi-Tool, made inappropriate hyphens as en dashes.
+* In Multi-Tool, need to re-add the affiliate links as they aren't in the MarkDown, but they are in the app.
 * In FAQ, added the full name as "Frequently Asked Questions (FAQ)".
 * In FAQ, replaced hyphens with appropriate en dashes using regex: `\s-\s`
 * In FAQ, capitalised Samsung as it's a proper noun.

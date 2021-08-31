@@ -174,7 +174,7 @@
 	</navPoint>
 	<navPoint id="navpoint-28" playOrder="28">
 		<navLabel>
-			<text>Self-defense</text>
+			<text>Self-Defense</text>
 		</navLabel>
 		<content src="self-defense.xhtml" />
 	</navPoint>
@@ -240,7 +240,7 @@
 	</navPoint>
 	<navPoint id="navpoint-39" playOrder="39">
 		<navLabel>
-			<text>Appendix: FAQ</text>
+			<text>Appendix: Frequently Asked Questions (FAQ)</text>
 		</navLabel>
 		<content src="appendix-faq.xhtml" />
 	</navPoint>

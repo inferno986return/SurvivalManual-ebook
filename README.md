@@ -35,9 +35,9 @@ The icon source files are saved in the .afdesign format used by [Affinity Design
 * Apply alterations to upstream (the original guide's wiki)
 
 ## E-book
-**The e-book is currently in development and does not compile.**
+**The e-book can be compiled and is currently in testing.**
 
-The ePub contents are in the e-book folder. The metadata.json (which needs to be completed) holds the metadata that is used to create the content.opf and toc.ncx files. Currently, ebookbuild creates ePub 2.0.1 files (with plans to support the latest ePub 3 version in the future).
+The ePub contents are in the e-book folder. The metadata.json holds the metadata that is used to create the content.opf and toc.ncx files. Currently, ebookbuild creates ePub 2.0.1 files (with plans to support the latest ePub 3 version in the future).
 
 The files are manually edited using the free Microsoft Visual Studio Code text editor with regular expressions (regex). The syntax is identical to the Atom editor. The regex syntax used here is as follows:
 
