@@ -268,6 +268,12 @@
 						"indentation": "1",
 						"pageName": "Appendix: Translator Notes",
 						"fileName": "appendix-translatornotes.xhtml"
+					},
+					{
+						"pageNumber": "40",
+						"indentation": "1",
+						"pageName": "Appendix: Further Reading",
+						"fileName": "appendix-furtherreading.xhtml"
 					}
 				]
 }

@@ -7,6 +7,7 @@
 * All the headings will need to be made consistent, I am using the original FM guide to assist with this.
 * Need to replace inappropriate hyphens with en dashes.
 * Need to re-add the Amazon affiliate links in the frontmatter.
+* Removed "<img class="cover-image" src="images/cover.png" alt=""/>" from bookcover. Need to make a JPG cover image.
 
 ## Chapter specific
 * In Introduction, grammatical changes such as removing hyphen from "re-install"
@@ -18,6 +19,8 @@
 * In Apps, added a morse code chart from Wikipedia (and attributed as public domain). Its 372px wide, close to the 350px that many of the other diagrams have.
 * In Apps, made SOS morse code bold and replaced full-stops with bullet symbols, then hyphens with em dashes.
 * In Apps, replaced ASIN for the BioLight camp stove to: B01FWRICY6
+* In Kit, removed hyphen from "Multi-Tool", also consistent with appendix.
+* In Kit, added Amazon link for LifeStraw (ASIN: B07C56LR6N).
 * In Medicine, the figure 4-1 image is not available on the wiki, but is on the app. What's going on there?
 * In Water, corrected "dehydrate" typo in the fluids table (I also need to get a proper table CSS class going there)
 * In Food, added an ordered list for several lists that were marked with an asterisk including the fish poisoning list.

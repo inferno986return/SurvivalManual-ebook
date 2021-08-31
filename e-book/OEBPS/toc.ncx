@@ -250,5 +250,11 @@
 		</navLabel>
 		<content src="appendix-translatornotes.xhtml" />
 	</navPoint>
+	<navPoint id="navpoint-41" playOrder="41">
+		<navLabel>
+			<text>Appendix: Further Reading</text>
+		</navLabel>
+		<content src="appendix-furtherreading.xhtml" />
+	</navPoint>
 </navMap>
 </ncx>
