@@ -590,6 +590,7 @@ span.initial-black, .initial-black
 .acrostic /*For acrostic acronyms, to give emphasis*/
 {
 	font-size: 1.2em;
+	margin-right: 0.05em;
 	font-weight: bold;
 }
 
@@ -633,7 +634,7 @@ table
 {
 	width: 100%;
 	border-collapse: collapse;
-	border: solid #000 0.2em;
+	border: solid #000 2px;
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
@@ -642,15 +643,15 @@ table.gta-table
 {
 	width: 100%;
 	border-collapse: collapse;
-	border-left: solid #000 0.2em;
-	border-right: solid #000 0.2em;
+	border-left: solid #000 2px;
+	border-right: solid #000 2px;
 	margin-top: 1em;
 	margin-bottom: 0em;
 }
 
 tr.gta-row
 {
-	border-top: solid #000 0.1em;
+	border-top: solid #000 2px;
 	border-bottom: none;
 	border-left: none;
 	border-right: none;
@@ -667,7 +668,7 @@ td
 	page-break-inside: avoid;
 	hyphens: none;
 	font-size: 0.9em;
-	border: solid #000 0.2em;
+	border: solid #000 2px;
 	font-variant-numeric: tabular-nums;
 	font-family: "Roboto", sans-serif;
 }
@@ -683,7 +684,7 @@ th
 	page-break-inside: avoid;
 	hyphens: none;
 	font-size: 0.9em;
-	border: solid #000 0.2em;
+	border: solid #000 2px;
 	font-variant-numeric: tabular-nums;
 	font-family: "Roboto Bold", sans-serif;
 	font-weight: bold;
@@ -861,6 +862,14 @@ div.warningbox
 	padding: 1em;
 	margin-top: 1em;
 	margin-bottom: 1em;
+}
+
+div.image-frame
+{
+	padding: 0.3em;
+	border: solid #000 2px;
+	margin-top: 0em;
+	margin-bottom: 0em;
 }
 
 div.indicia-warning
