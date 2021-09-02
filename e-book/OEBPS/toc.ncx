@@ -234,7 +234,7 @@
 	</navPoint>
 	<navPoint id="navpoint-38" playOrder="38">
 		<navLabel>
-			<text>Appendix: MultiTool</text>
+			<text>Appendix: Multi-Tool</text>
 		</navLabel>
 		<content src="appendix-multitool.xhtml" />
 	</navPoint>

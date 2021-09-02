@@ -1,6 +1,6 @@
-Checksum values for LigiSurvivalManual.epub on 2021-09-02 10:15:46UTC
+Checksum values for LigiSurvivalManual.epub on 2021-09-02 10:26:50UTC
 =================================================================================
 
-MD5: ef2a8528bbe6e023f2632c9b0b6072ef
-SHA-256: 19d71d76ec04bc29d937df786af836dfb5046fc40e40050715a87d79538453c2
-SHA-512: b5353572d4eb560e6c2a5b773032cddbc7a26e0711a1acb7350f1ac134e25a110f2d2a6cf4c472d24b31d2202166a0ce68b4e2d3c654f7da2eb7f5ee7acef16a
+MD5: d58dfb50e1755cb7e1fbc6e8e12057d0
+SHA-256: 5913bc34bb6ddb7ad24ea73d76caa8eb56d06fd858d40b3b3ec46460017733c5
+SHA-512: a5e882235ea36bf9012a0e0d4c090369c81e892e103e2927d68344d0f90cd516a03c09171b8e480b4103fc5eab338fb29e0ca7c7ae5bef45151f1e19deab4bb5
