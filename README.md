@@ -1,5 +1,5 @@
 # SurvivalManual-ebook
-An ePub (and eventual PDF) of the survival manual by Ligi
+An ePub (and eventual PDF) of the survival manual by Ligi, as requested by: https://github.com/ligi/SurvivalManual/issues/98
 
 This project is a community-created survival manual based on the public domain [US Army Survival Field Manual FM 3-05.70 (FM 21-76)](https://fas.org/irp/doddir/army/fm3-05-70.pdf).
 
@@ -26,6 +26,12 @@ The SAS Survival Guide is also useful for obtaining inspiration for creating eff
 
 Most of the content will be kept the same though I plan on making minor alterations (see the ConversionNotes.md for more information). I have already changed the Psychology chapter icon for a more appropriate one, along with alterations to the typesetting. One image will likely be replaced with just a table.
 
+Alongside providing content from Ligi's Android app, I want to improve the content at the same time by:
+
+* Added a table of contents (TOC) because that's required for an e-book. (https://github.com/ligi/SurvivalManual/issues/92)
+* Transcribing the text-heavy images (https://github.com/ligi/SurvivalManual/issues/62)
+* Hand sanitiser recipe, a recipe I found on Telegram is added as a bonus chapter in the repo's "misc" folder. I have extracted the text from the WHO PDF (https://github.com/ligi/SurvivalManual/issues/97).
+
 The icon source files are saved in the .afdesign format used by [Affinity Designer](https://affinity.serif.com/designer). I may move this over to [Inkscape](https://inkscape.org) to make the project more accessible.
 
 ## What's needed?
@@ -35,9 +41,24 @@ The icon source files are saved in the .afdesign format used by [Affinity Design
 * Apply alterations to upstream (the original guide's wiki)
 
 ## E-book
+
 **The e-book can be compiled and is currently in testing.**
 
 The ePub contents are in the e-book folder. The metadata.json holds the metadata that is used to create the content.opf and toc.ncx files. Currently, ebookbuild creates ePub 2.0.1 files (with plans to support the latest ePub 3 version in the future).
+
+### Development
+
+I use Visual Studio Code and formerly Atom to edit the XHTML, CSS and JSON files. Any text editor that supports regular expressions should be fine for e-book development, including `vim` and `emacs`.
+
+### Compilation
+
+The e-book metadata is added to the metadata.json file which is used by ebookbuild script to compile the book.
+
+When I have finished the e-book it can be compiled. To compile the ePub, you will need to install both [Python 3](https://www.python.org/) to create the ePub and the [Java Development Kit (JDK)](https://www.oracle.com/uk/java/technologies/javase-downloads.html) to run epubcheck to verify it is up to standard.
+
+Compile an ePub with the following command in Bash (I recommend installing WSL+Ubuntu for Windows 10 users) while in the e-book folder: `python3 ebookbuild.py && java -jar epubcheck.jar LigiSurvivalManual.epub`
+
+### Regular expressions
 
 The files are manually edited using the free Microsoft Visual Studio Code text editor with regular expressions (regex). The syntax is identical to the Atom editor. The regex syntax used here is as follows:
 
@@ -63,11 +84,6 @@ For each chapter I do the following:
 11. For chapters that have lists within paragraphs, escape the asterisk `\*\s(.+?)\.` and then add the list tags `<li>$1.</li>`
 12. ...
 
-The metadata will need to be added to the metadata.json file which is used by ebookbuild script to compile the book.
-
-When I have finished the e-book it can be compiled. To compile the ePub, you will need to install both [Python 3](https://www.python.org/) to create the ePub and the [Java Development Kit (JDK)](https://www.oracle.com/uk/java/technologies/javase-downloads.html) to run epubcheck to verify it is up to standard.
-
-Compile an ePub with the following command in Bash (I recommend installing WSL+Ubuntu for Windows 10 users) while in the e-book folder: `python3 ebookbuild.py && java -jar epubcheck.jar LigiSurvivalManual.epub`
 
 ## Licencing
 The Google Material UI icons are licenced under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).
