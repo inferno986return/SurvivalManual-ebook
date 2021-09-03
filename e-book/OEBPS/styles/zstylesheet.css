@@ -613,6 +613,11 @@ li
 	margin-bottom: 0em;
 }
 
+ol.water-activity
+{
+	list-style-type: upper-alpha;
+}
+
 ul.nomargin, ol.nomargin
 {
   margin-top: 0em!important;
