@@ -690,8 +690,10 @@ th
 	hyphens: none;
 	font-size: 0.9em;
 	border: solid #000 2px;
+	background-color: #000;
+	color: #FFF;
 	font-variant-numeric: tabular-nums;
-	font-family: "Roboto Bold", sans-serif;
+	font-family: sans-serif;
 	font-weight: bold;
 }
 

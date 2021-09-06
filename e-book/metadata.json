@@ -260,17 +260,23 @@
 					{
 						"pageNumber": "38",
 						"indentation": "1",
+						"pageName": "Appendix: Recipes for Hand Sanitizer",
+						"fileName": "appendix-handsanitizer.xhtml"
+					},
+					{
+						"pageNumber": "39",
+						"indentation": "1",
 						"pageName": "Appendix: Frequently Asked Questions (FAQ)",
 						"fileName": "appendix-faq.xhtml"
 					},
 					{
-						"pageNumber": "39",
+						"pageNumber": "40",
 						"indentation": "1",
 						"pageName": "Appendix: Translator Notes",
 						"fileName": "appendix-translatornotes.xhtml"
 					},
 					{
-						"pageNumber": "40",
+						"pageNumber": "41",
 						"indentation": "1",
 						"pageName": "Appendix: Further Reading",
 						"fileName": "appendix-furtherreading.xhtml"

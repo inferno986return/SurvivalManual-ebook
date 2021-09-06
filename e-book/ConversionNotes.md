@@ -35,6 +35,7 @@
 * In Desert, there are also paragraph numbers like with the Food chapter.
 * In Tropical, the tree level diagram has 2 ordinal typos.
 * In Tropical and Sea, reworded the "Chapter Water" and "Chapter Food" references to flow better in English. Need to make sure this consistent throughout the book.
+* In Cold, found a typo for "injured" in the Frostbite table.
 * In Cold, there are also paragraph numbers.
 * In Cold, the windchill table is so large I have made cover the whole width of the page.
 * In Cold, changed the appearance of the 4 principles of keeping warm. Each letter is bold and separated from the paragraphs following it clearly. I plan on making these standout more.
