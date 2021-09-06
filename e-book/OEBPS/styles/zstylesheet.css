@@ -609,6 +609,7 @@ li
   	font-family: "Roboto", sans-serif;
 	font-variant-numeric: tabular-nums; /*Force cap-height proportional numbers for fonts that use default text figures such as Literata or Georgia.*/
  	hyphens: none;
+	text-align: left;
 	margin-top: 0.25em;
 	margin-bottom: 0em;
 }
