@@ -39,6 +39,7 @@
 * In Cold, there are also paragraph numbers.
 * In Cold, the windchill table is so large I have made cover the whole width of the page.
 * In Cold, changed the appearance of the 4 principles of keeping warm. Each letter is bold and separated from the paragraphs following it clearly. I plan on making these standout more.
+* In Cold, added space for "water purifying".
 * In Sea, changed the five As list from unordered to ordered. Then used the acrostic class I made to make them stand out, then added an en dash with the keyword spaced from the accompanying explanation sentence.
 * In Signaling, transcribed the signaling image into the text. Makes it a lot clearer (and searchable).
 * In Self-Defense, moved summary to a whitebox. Looks pretty good.
