@@ -40,7 +40,9 @@
 * In Cold, the windchill table is so large I have made cover the whole width of the page.
 * In Cold, changed the appearance of the 4 principles of keeping warm. Each letter is bold and separated from the paragraphs following it clearly. I plan on making these standout more.
 * In Cold, added space for "water purifying".
+* In Sea, made the "five As" bold.
 * In Sea, changed the five As list from unordered to ordered. Then used the acrostic class I made to make them stand out, then added an en dash with the keyword spaced from the accompanying explanation sentence.
+* In Sea, corrected the sea snake and eel bites as being venomous. Clint's Reptiles has a good explanation for the difference between poisonous (if you bite it) and venomous (if it bites you).
 * In Signaling, transcribed the signaling image into the text. Makes it a lot clearer (and searchable).
 * In Self-Defense, moved summary to a whitebox. Looks pretty good.
 * In Man-Made Hazards, added acronym for NATO.

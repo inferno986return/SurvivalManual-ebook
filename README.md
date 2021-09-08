@@ -7,6 +7,8 @@ Content provided by: https://github.com/ligi/SurvivalManual
 
 I have started this project by adding the wiki folder where I have used git clone to copy across the contents of the wiki. The wiki was last edited in 2020.
 
+Much like Ligi's app, the survival manual is small at under 4.5MB in size for the ePub (usually Kindle books are larger for backward compatibility).
+
 ## Foreword
 
 *“You’re not taking into consideration the most important human element of all; the will to live. Until a person is faced with death, it’s impossible to tell whether they have what it takes to survive.”*
@@ -58,6 +60,15 @@ When I have finished the e-book it can be compiled. To compile the ePub, you wil
 
 Compile an ePub with the following command in Bash (I recommend installing WSL+Ubuntu for Windows 10 users) while in the e-book folder: `python3 ebookbuild.py && java -jar epubcheck.jar LigiSurvivalManual.epub`
 
+An acceptable ePub for testing should have the `No errors or warnings detected` output from epubcheck.
+
+### Testing
+
+I recommend the following 2 ways of testing an ePub. Ideally the ePub should look good both in both readers:
+
+* Upload the ePub to [Google Play Books](https://play.google.com/books) (requires Google Account) - This is great for reading on the go and I use it to hightlight and make note of any and all issues I have with the current ePub I am testing.
+* Open the ePub in [Adobe Digital Editions](https://www.adobe.com/uk/solutions/ebook/digital-editions.html) (ADE) (available for Windows and Mac) - A popular ePub reader from Adobe (notable as it supports Adobe DRM) that is quite strict. Back when I first started e-book development I had to make sure the ePub looked perfect in ADE before submission to the client.
+
 ### Regular expressions
 
 The files are manually edited using the free Microsoft Visual Studio Code text editor with regular expressions (regex). The syntax is identical to the Atom editor. The regex syntax used here is as follows:
@@ -67,7 +78,7 @@ The files are manually edited using the free Microsoft Visual Studio Code text e
 * `\t` used to find or create a tabbed indentation (equivalent of pressing the tab key)
 * `\n` used to find or create a newline (equivalent of pressing the return/enter key)
 * `\s` used to find or create a space (equivalent of pressing the spacebar)
-* `\` the backslash on its own is used to tell regex that you are manipulating an actual character, such as a `.`, `+`, `?`, `*`.
+* `\` the backslash on its own is used to tell regex that you are manipulating an actual character, such as a `.`, `+`, `?`, `*`, `$`.
 
 For each chapter I do the following:
 
@@ -88,9 +99,9 @@ For each chapter I do the following:
 ## Licencing
 The Google Material UI icons are licenced under [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
-The app itself is licenced under [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html).
+The app itself is licenced under [GNU GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html) though I don't think that affects this project's files.
 
-I have clarified with the developer that the survival manual's content is the public domain.
+I have clarified with the developer that the survival manual's wiki content is in the public domain.
 
 There is also a BSD-like disclaimer for the app:
 
