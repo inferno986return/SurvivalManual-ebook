@@ -1,7 +1,7 @@
 # Conversion Notes
 ## General
 * Initial conversion of MarkDown files to HTML via pandoc using this Bash command (courtesy of: https://www.dyrobooks.com/blog/2018/06/30/batch-convert-files-with-pandoc/ ): `for i in *.md ; do echo "$i" && pandoc -s $i -o $i.html ; done`
-* Added icons to the Contents. I exported them from the [Material site](https://fonts.google.com/icons) as filled white icons in the .svg format that are 36dp in size. Looks good with the icon at 36px (tall) and exported to 50px (squared) in total size. These are a work-in-progress.
+* Added icons to the Contents. I exported them from the [Material site](https://fonts.google.com/icons) as filled white icons in the .svg format that are 36dp in size. Looks good with the icon at 36px (tall, or wide for icons that are wider than they are tall) and exported to 50px (squared) in total size. Google add whitespace around the perimeter of each icon so I remove that and make the icons themselves 36px, then snap the icon to the exact centre of the black circle. These icons are a work-in-progress and feedback is welcome.
 * Added coloured boxes for warning and caution text throughout the book.
 * Made the tables consistent throughout the book.
 * All the headings will need to be made consistent, I am using the original FM guide to assist with this. They are of mixed case.
