@@ -13,7 +13,7 @@ Use ems instead of percentages.
 
 @font-face
 {
-  font-family: "Roboto Slab";	
+  font-family: "Roboto Slab Regular";	
   src: url("../fonts/RobotoSlab-Regular.ttf");
 }
 
@@ -40,11 +40,11 @@ Use ems instead of percentages.
 	src: url("../fonts/Roboto-Italic.ttf");
 }
 
-@font-face {
+/*@font-face {
 	font-family: "Roboto Bold-Italic";
 	font-weight: italic;
 	src: url("../fonts/Roboto-BoldItalic.ttf");
-}
+}*/
 
 /*Cover*/
 
@@ -219,7 +219,8 @@ h1.toc
 
 h2.toc
 {
-	margin: 0em;
+	margin-top: 0.5em;
+	margin-bottom: 0em;
 	text-indent: 2em;
 	font-size: 1.1em;
 	font-family: "Roboto Slab Regular", sans-serif;
@@ -645,7 +646,7 @@ table
 	border-collapse: collapse;
 	border: solid #000 2px;
 	margin-top: 1em;
-	margin-bottom: 1em;
+	margin-bottom: 0em;
 }
 
 table.gta-table
@@ -669,7 +670,7 @@ tr.gta-row
 td
 {
 	text-indent: 0em !important;
-	padding: 0.2em;
+	padding: 0.3em;
 	margin-left: 0em;
 	margin-right: 0em;
 	vertical-align: top;
@@ -678,6 +679,24 @@ td
 	hyphens: none;
 	font-size: 0.9em;
 	border: solid #000 2px;
+	font-variant-numeric: tabular-nums;
+	font-family: "Roboto", sans-serif;
+}
+
+td.victim
+{
+	text-indent: 0em !important;
+	padding: 0.2em;
+	margin-left: 0em;
+	margin-right: 0em;
+	vertical-align: top;
+	text-align: center;
+	page-break-inside: avoid;
+	hyphens: none;
+	font-size: 0.9em;
+	border: none;
+	border-left: solid #000 2px;
+	border-right: solid #000 2px;
 	font-variant-numeric: tabular-nums;
 	font-family: "Roboto", sans-serif;
 }
@@ -781,7 +800,7 @@ table.indicia-table
 
 div.image-center, .image-center
 {
-	max-width: 100%;
+	width: 100%;
 	/*border: solid 2px; Useful for debugging.*/
 	margin-top: 1em;
 }
@@ -797,16 +816,14 @@ div.image-center, .image-center
 	/*border: solid 2px; Useful for debugging.*/
 }
 
-p.image, .image
+img.image, .image
 {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 100%;
+	width: 100%;
 	display: block;
 	/*border: solid #F00 1px; Useful for debugging.*/
 }
 
-.figure-caption
+p.figure-caption
 {
 	font-size: 1em;
 	text-align: center;
