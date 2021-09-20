@@ -64,10 +64,19 @@ An acceptable ePub for testing should have the `No errors or warnings detected` 
 
 ### Testing
 
+#### ePub
+
 I recommend the following 2 ways of testing an ePub. Ideally the ePub should look good both in both readers:
 
 * Upload the ePub to [Google Play Books](https://play.google.com/books) (requires Google Account) - This is great for reading on the go and I use it to hightlight and make note of any and all issues I have with the current ePub I am testing.
 * Open the ePub in [Adobe Digital Editions](https://www.adobe.com/uk/solutions/ebook/digital-editions.html) (ADE) (available for Windows and Mac) - A popular ePub reader from Adobe (notable as it supports Adobe DRM) that is quite strict. Back when I first started e-book development I had to make sure the ePub looked perfect in ADE before submission to the client.
+
+#### Kindle
+
+I am prioritising the ePub as it's an open format and I like my approach to testing. Kindle books can be made in two ways and then sideloaded:
+
+* Official - currently only [Kindle Previewer](https://kdp.amazon.com/en_US/help/topic/G202131170) (on Windows and macOS) is the official tool from Amazon to create Kindle books. The [`kindlegen`](https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765211) tool has been discontinued and is no longer available for download.
+* Unofficial - the [Calibre](https://calibre-ebook.com/) library software includes extensive conversion tools that create the older .mobi files.
 
 ### Regular expressions
 
