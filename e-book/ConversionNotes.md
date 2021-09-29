@@ -28,6 +28,7 @@
 * In Kit, added Amazon link for LifeStraw (ASIN: B07C56LR6N).
 * ~~In Medicine, the figure 4-1 image is not available on the wiki, but is on the app. What's going on there?~~
 * In Medicine, added a nested list to step 4 of the open airway steps. Looks more readable.
+* In Medicine, replaced poisonous with venomous. A poisonous animal is deadly when consumed or touched, a venomous animal has a deadly bite.
 * In Water, corrected "dehydrate" typo in the fluids table (I also need to get a proper table CSS class going there)
 * In Food, added an ordered list for several lists that were marked with an asterisk including the fish poisoning list.
 * In Food, why is each paragraph numbered? Have the paragraphs just been copied verbatim from the original US Army FM guide? Some numbered paragraphs are hyperlinked so I'll leave them.
