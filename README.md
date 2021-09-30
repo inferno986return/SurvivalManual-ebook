@@ -68,7 +68,7 @@ An acceptable ePub for testing should have the `No errors or warnings detected` 
 
 I recommend the following 2 ways of testing an ePub. Ideally the ePub should look good both in both readers:
 
-* Upload the ePub to [Google Play Books](https://play.google.com/books) (requires Google Account) - This is great for reading on the go and I use it to hightlight and make note of any and all issues I have with the current ePub I am testing.
+* Upload the ePub to [Google Play Books](https://play.google.com/books) (requires Google Account) - This is great for reading on the go and I use it to hightlight and make note of any and all issues I have with the current ePub I am testing. The notes are automatically saved to a document on Google Drive even if the ePub is deleted, which I do when I have compiled a new version.
 * Open the ePub in [Adobe Digital Editions](https://www.adobe.com/uk/solutions/ebook/digital-editions.html) (ADE) (available for Windows and Mac) - A popular ePub reader from Adobe (notable as it supports Adobe DRM) that is quite strict. Back when I first started e-book development I had to make sure the ePub looked perfect in ADE before submission to the client.
 
 #### Kindle
