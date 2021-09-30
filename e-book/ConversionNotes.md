@@ -45,6 +45,8 @@
 * In Sea, made the "five As" bold.
 * In Sea, changed the five As list from unordered to ordered. Then used the acrostic class I made to make them stand out, then added an en dash with the keyword spaced from the accompanying explanation sentence.
 * In Sea, corrected the sea snake and eel bites as being venomous. Clint's Reptiles has a good explanation for the difference between poisonous (if you bite it) and venomous (if it bites you).
+* In Direction Finding, removed the "Step 1" part and replaced with ordered list, which is easier to read and less characters.
+* In Direction Finding, capitalised "Volts" as with any unit named after a scientist.
 * In Signaling, transcribed the signaling image into the text. Makes it a lot clearer (and searchable).
 * In Self-Defense, moved summary to a whitebox. Looks pretty good.
 * In Man-Made Hazards, added acronym for NATO.
