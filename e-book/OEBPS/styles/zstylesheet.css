@@ -596,7 +596,7 @@ span.initial-black, .initial-black
 {
 	font-size: 1.2em;
 	margin-right: 0.05em;
-	font-weight: bold;
+	font-weight: bold!important;
 }
 
 /*Text Alignment*/
@@ -830,7 +830,7 @@ p.figure-caption
 	font-size: 1em;
 	text-align: center;
 	color: #000;
-	font-weight: bold;
+	font-weight: bold!important;
 	margin-top: 0em;
 }
 

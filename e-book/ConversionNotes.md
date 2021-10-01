@@ -18,6 +18,7 @@
 * In Power, I have ensured each chemical battery type has its full name and common abbreviation in brackets.
 * In Power, I have added two warning boxes to emphasise the dangers of lead-acid and Li-On batteries.
 * In Power, some minor grammatical changes. Infact I would recommend using Grammarly on this chapter at the upstream.
+* In Power, expanded "reportedly 6h" to "reportedly within 6 hours" which is clearer to me.
 * In Apps, corrected "Psycology" typo.
 * In Apps, replaced hyphens with appropriate en dashes.
 * In Apps, added that Morse signal is also known as Morse code.
