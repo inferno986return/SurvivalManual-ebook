@@ -69,7 +69,7 @@ h1.title
 	font-size: 2em;
 	font-weight: bold;
 	text-align: center;
-	font-family: "Roboto Slab", serif;
+	font-family: "Roboto Slab Bold", serif;
 	margin-top: 4em;
  	margin-bottom: 0em;
 }
@@ -142,7 +142,7 @@ h1.indicia-heading
 {
 	text-align: center;
 	font-size: 1em; /*small works best here rather than a specific em*/
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto Bold", sans-serif;
 	font-weight: bold;
 	margin-bottom: 1em;
 }
@@ -595,6 +595,7 @@ span.initial-black, .initial-black
 .acrostic /*For acrostic acronyms, to give emphasis*/
 {
 	font-size: 1.2em;
+	font-family: "Roboto Bold", sans-serif;
 	margin-right: 0.05em;
 	font-weight: bold!important;
 }
@@ -734,7 +735,7 @@ th.gta-heading /*Ground-to-air table*/
 	color: #FFF;
 	background-color: #000;
 	font-variant-numeric: tabular-nums;
-	font-family: sans-serif;
+	font-family: "Roboto Bold", sans-serif;
 	font-weight: bold;	
 }
 
@@ -751,7 +752,7 @@ td.gta-number
 	font-size: 0.9em;
 	border: none;
 	font-variant-numeric: tabular-nums;
-	font-family: sans-serif;
+	font-family: "Roboto Regular", sans-serif;
 	font-weight: normal;	
 }
 
@@ -829,9 +830,10 @@ p.figure-caption
 {
 	font-size: 1em;
 	text-align: center;
+	font-family: "Roboto Bold", sans-serif;
 	color: #000;
 	font-weight: bold!important;
-	margin-top: 0em;
+	margin-top: 0.1em;
 }
 
 img.toc_icon
