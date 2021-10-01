@@ -69,7 +69,8 @@ h1.title
 	font-size: 2em;
 	font-weight: bold;
 	text-align: center;
-  font-family: sans-serif;
+	font-family: "Roboto Slab", serif;
+	margin-top: 4em;
  	margin-bottom: 0em;
 }
 
@@ -141,7 +142,7 @@ h1.indicia-heading
 {
 	text-align: center;
 	font-size: 1em; /*small works best here rather than a specific em*/
-	font-family: sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-weight: bold;
 	margin-bottom: 1em;
 }
@@ -330,7 +331,7 @@ p
 p.indicia, .indicia
 {
   	font-size: 0.8em !important; /*0.8em or small*/
-	font-family: sans-serif;
+	font-family: "Roboto", sans-serif;
 	text-indent: 1em !important;
 	font-variant-numeric: tabular-nums; /*Force cap-height proportional numbers for fonts that use default text figures such as Literata or Georgia.*/
 }
@@ -338,7 +339,7 @@ p.indicia, .indicia
 p.noindent-indicia, .noindent-indicia
 {
 	font-size: 0.8em !important; /*0.8em or small*/
-	font-family: sans-serif;
+	font-family: "Roboto", sans-serif;
 	text-indent: 0em !important;
 	text-align: left !important;
 	font-variant-numeric: tabular-nums; /*Force cap-height tabular numbers for fonts that use default text figures such as Literata or Georgia.*/
@@ -347,7 +348,7 @@ p.noindent-indicia, .noindent-indicia
 p.center-indicia, .center-indicia
 {
   	font-size: 0.8em !important; /*0.8em or small*/
-	font-family: sans-serif;
+	font-family: "Roboto", sans-serif;
   	text-align: center !important;
   	font-variant-numeric: tabular-nums; /*Force cap-height tabular numbers for fonts that use default text figures such as Literata or Georgia.*/
 }
