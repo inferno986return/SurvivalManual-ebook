@@ -796,9 +796,9 @@ td.morse
 	font-size: 1em;
 }
 
-td.dot-dash
+td.dot-dash, .dot-dash
 {
-	font-size: 1em;
+	font-size: 1.1em;
 	font-family: "Roboto Bold", sans-serif;
 	font-weight: bold;
 }
