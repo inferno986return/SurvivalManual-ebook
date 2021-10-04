@@ -719,7 +719,7 @@ th
 	background-color: #000;
 	color: #FFF;
 	font-variant-numeric: tabular-nums;
-	font-family: sans-serif;
+	font-family: "Roboto Bold", sans-serif;
 	font-weight: bold;
 }
 
@@ -789,6 +789,18 @@ td.gta-code-symbol
 	font-variant-numeric: tabular-nums;
 	font-family: sans-serif;
 	font-weight: normal;	
+}
+
+td.morse
+{
+	font-size: 1em;
+}
+
+td.dot-dash
+{
+	font-size: 1em;
+	font-family: "Roboto Bold", sans-serif;
+	font-weight: bold;
 }
 
 table.indicia-table
