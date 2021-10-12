@@ -752,7 +752,7 @@ td.gta-number
 	font-size: 0.9em;
 	border: none;
 	font-variant-numeric: tabular-nums;
-	font-family: "Roboto Regular", sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-weight: normal;	
 }
 
@@ -769,7 +769,7 @@ td.gta-message
 	font-size: 0.9em;
 	border: none;
 	font-variant-numeric: tabular-nums;
-	font-family: sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-weight: normal;	
 }
 
@@ -780,14 +780,14 @@ td.gta-code-symbol
 	padding: 0.5em;
 	margin-left: 0em;
 	margin-right: 0em;
-	vertical-align: top;
+	vertical-align: middle;
 	text-align: center;
 	page-break-inside: avoid;
 	hyphens: none;
 	font-size: 1.2em;
 	border: none;
 	font-variant-numeric: tabular-nums;
-	font-family: sans-serif;
+	font-family: "Roboto", sans-serif;
 	font-weight: normal;	
 }
 
