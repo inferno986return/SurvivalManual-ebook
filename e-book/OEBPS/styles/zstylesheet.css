@@ -791,9 +791,14 @@ td.gta-code-symbol
 	font-weight: normal;	
 }
 
-td.body-signals
+td.vmiddle
 {
 	vertical-align: middle;
+}
+
+td.vbottom
+{
+	vertical-align: bottom;
 }
 
 td.morse
