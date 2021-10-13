@@ -31,7 +31,7 @@ Most of the content will be kept the same though I plan on making minor alterati
 Alongside providing content from Ligi's Android app, I want to improve the content at the same time by:
 
 * Added a table of contents (TOC) because that's required for an e-book. (https://github.com/ligi/SurvivalManual/issues/92)
-* Transcribing the text-heavy images (https://github.com/ligi/SurvivalManual/issues/62)
+* Transcribing the text-heavy images (https://github.com/ligi/SurvivalManual/issues/62) - I have already completed the Signaling chapter.
 * Hand sanitiser recipe, a recipe I found on Telegram is added as a bonus chapter in the repo's "misc" folder. I have extracted the text from the WHO PDF (https://github.com/ligi/SurvivalManual/issues/97).
 
 The icon source files are saved in the .afdesign format used by [Affinity Designer](https://affinity.serif.com/designer). I may move this over to [Inkscape](https://inkscape.org) to make the project more accessible.
