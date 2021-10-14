@@ -421,6 +421,11 @@ p.right, .right
 	text-align: right;
 }
 
+p.serif, .serif
+{
+	font-family: serif;
+}
+
 p.sans, .sans
 {
 	font-family: sans-serif;
