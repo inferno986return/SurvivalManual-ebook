@@ -657,6 +657,12 @@ table
 	margin-bottom: 0em;
 }
 
+table.diagram, td.diagram
+{
+	border: none;
+	font-size: 1em;
+}
+
 table.gta-table
 {
 	width: 100%;
