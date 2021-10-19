@@ -661,6 +661,7 @@ table.diagram, td.diagram
 {
 	border: none;
 	font-size: 1em;
+	vertical-align: bottom;
 }
 
 table.gta-table
