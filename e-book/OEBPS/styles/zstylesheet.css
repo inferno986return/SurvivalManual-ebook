@@ -661,6 +661,23 @@ table.diagram, td.diagram
 {
 	border: none;
 	font-size: 1em;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+td.diagram-left
+{
+	border: none;
+	font-size: 1em;
+	text-align: left;
+	vertical-align: bottom;
+}
+
+td.diagram-right
+{
+	border: none;
+	font-size: 1em;
+	text-align: right;
 	vertical-align: bottom;
 }
 
