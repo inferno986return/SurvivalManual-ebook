@@ -67,4 +67,5 @@
 * In Poisonous Plants, added the foxglove to poisonous via ingestion section. I should also add the hogweed plant.
 * Comparing this Poisonous Plants chapter to the FM original shows descriptions and images, as well as more plants. More information should be taken from there.
 * In Translator Notes, tidied up some grammar and replaced hyphens with en dashes.
+* In Hand Sanitizer, tried condensing the WHO document by combining the formulation and recommended quantities into one table.
 * Added Further Reading section as a reference on all books mentioned in this survival guide.
