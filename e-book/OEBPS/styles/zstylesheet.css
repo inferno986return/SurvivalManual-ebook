@@ -701,11 +701,11 @@ tr.gta-row
 
 td
 {
-	text-indent: 0em !important;
+	text-indent: 0em;
 	padding: 0.3em;
 	margin-left: 0em;
 	margin-right: 0em;
-	vertical-align: top;
+	vertical-align: bottom;
 	text-align: center;
 	page-break-inside: avoid;
 	hyphens: none;
@@ -719,18 +719,33 @@ td.victim
 {
 	text-indent: 0em !important;
 	padding: 0.2em;
-	margin-left: 0em;
-	margin-right: 0em;
 	vertical-align: top;
-	text-align: center;
-	page-break-inside: avoid;
-	hyphens: none;
 	font-size: 0.9em;
 	border: none;
 	border-left: solid #000 2px;
 	border-right: solid #000 2px;
 	font-variant-numeric: tabular-nums;
 	font-family: "Roboto", sans-serif;
+}
+
+td.torniquet-col1
+{
+	text-indent: 0em !important;
+	padding: 0.2em;
+	vertical-align: middle;
+	font-size: 0.9em;
+	border-left: solid #000 2px;
+	border-right: none;
+}
+
+td.torniquet-col2
+{
+	text-indent: 0em !important;
+	padding: 0.2em;
+	vertical-align: middle;
+	font-size: 0.9em;
+	border-left: none;
+	border-right: solid #000 2px;
 }
 
 th
