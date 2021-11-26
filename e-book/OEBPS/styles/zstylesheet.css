@@ -265,6 +265,18 @@ h4.subheading {
 
 /*Book-specific headings*/
 
+h1.warningbox-heading {
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 0em;
+}
+
+h1.whitebox-heading {
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 0em;
+}
+
 h1.protip-heading {
 	font-size: 1.2em;
 	font-weight: bold;
@@ -834,6 +846,7 @@ div.title-page {
 div.greybox {
 	border: solid #000 2px;
 	background-color: #D3D3D3;
+	border-radius: 5px;
 	padding: 1em;
 	margin-top: 1em;
 	margin-bottom: 1em;
@@ -842,6 +855,7 @@ div.greybox {
 div.whitebox {
 	border: solid #000 2px;
 	background-color: none;
+	border-radius: 5px;
 	padding: 1em;
 	margin-top: 1em;
 	margin-bottom: 1em;
@@ -851,6 +865,7 @@ div.whitebox {
 div.warningbox {
 	border: solid #000 2px;
 	background-color: #F8DE7E;
+	border-radius: 5px;
 	padding: 1em;
 	margin-top: 1em;
 	margin-bottom: 1em;
