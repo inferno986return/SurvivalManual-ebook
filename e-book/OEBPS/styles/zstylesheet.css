@@ -585,10 +585,11 @@ p.sublist, .sublist {
 }
 
 /*Tables*/
+
 table {
 	width: 100%;
-	border-collapse: collapse;
 	border: solid #000 2px;
+	border-collapse: collapse;
 	margin-top: 1em;
 	margin-bottom: 0em;
 }
@@ -598,6 +599,21 @@ table.diagram, td.diagram {
 	font-size: 1em;
 	text-align: center;
 	vertical-align: bottom;
+}
+
+td {
+	text-indent: 0em;
+	padding: 0.3em;
+	margin-left: 0em;
+	margin-right: 0em;
+	text-align: center;
+	vertical-align: middle;
+	page-break-inside: avoid;
+	hyphens: none;
+	font-size: 0.9em;
+	border: solid #000 2px;
+	font-variant-numeric: tabular-nums;
+	font-family: "Roboto", sans-serif;
 }
 
 td.diagram-left {
@@ -628,21 +644,6 @@ tr.gta-row {
 	border-bottom: none;
 	border-left: none;
 	border-right: none;
-}
-
-td {
-	text-indent: 0em;
-	padding: 0.3em;
-	margin-left: 0em;
-	margin-right: 0em;
-	vertical-align: bottom;
-	text-align: center;
-	page-break-inside: avoid;
-	hyphens: none;
-	font-size: 0.9em;
-	border: solid #000 2px;
-	font-variant-numeric: tabular-nums;
-	font-family: "Roboto", sans-serif;
 }
 
 td.victim {
@@ -846,7 +847,6 @@ div.title-page {
 div.greybox {
 	border: solid #000 2px;
 	background-color: #D3D3D3;
-	border-radius: 5px;
 	padding: 1em;
 	margin-top: 1em;
 	margin-bottom: 1em;
@@ -855,17 +855,14 @@ div.greybox {
 div.whitebox {
 	border: solid #000 2px;
 	background-color: none;
-	border-radius: 5px;
 	padding: 1em;
 	margin-top: 1em;
 	margin-bottom: 1em;
-
 }
 
 div.warningbox {
 	border: solid #000 2px;
 	background-color: #F8DE7E;
-	border-radius: 5px;
 	padding: 1em;
 	margin-top: 1em;
 	margin-bottom: 1em;
