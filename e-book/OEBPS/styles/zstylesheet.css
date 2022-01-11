@@ -267,12 +267,14 @@ h4.subheading {
 
 h1.warningbox-heading {
 	font-size: 1.1em;
+	font-family: "Roboto Bold", sans-serif;
 	font-weight: bold;
 	margin: 0em;
 }
 
 h1.whitebox-heading {
 	font-size: 1.1em;
+	font-family: "Roboto Bold", sans-serif;
 	font-weight: bold;
 	margin: 0em;
 }
@@ -288,14 +290,6 @@ h1.split-page {
 	font-size: 2em;
 	font-weight: bold;
 	text-align: center;
-}
-
-h1.motleypress-heading {
-  font-size: 1.42em;
-  font-family: sans-serif;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1em;
 }
 
 /*Paragraphs*/
