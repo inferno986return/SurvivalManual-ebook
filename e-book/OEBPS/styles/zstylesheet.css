@@ -12,13 +12,13 @@ Use ems instead of percentages.
 /*Fonts*/
 
 @font-face {
-  font-family: "Roboto Slab Regular";	
-  src: url("../fonts/RobotoSlab-Regular.ttf");
+	font-family: "Roboto Slab Regular";	
+	src: url("../fonts/RobotoSlab-Regular.ttf");
 }
 
 @font-face {
-  font-family: "Roboto Slab Bold";	
-  src: url("../fonts/RobotoSlab-Bold.ttf");
+	font-family: "Roboto Slab Bold";	
+	src: url("../fonts/RobotoSlab-Bold.ttf");
 }
 
 @font-face {
@@ -47,15 +47,15 @@ Use ems instead of percentages.
 /*Cover*/
 
 p.kindle-center {
-  text-align: center; /*Fix for Kindle?*/
+	text-align: center; /*Fix for Kindle?*/
 }
 
 img.cover-image {
-  width: 700px;
-  height: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+	width: 700px;
+	height: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
 }
 
 /*Titles*/
@@ -66,7 +66,7 @@ h1.title {
 	text-align: center;
 	font-family: "Roboto Slab Bold", serif;
 	margin-top: 4em;
- 	margin-bottom: 0em;
+	margin-bottom: 0em;
 }
 
 h2.title {
@@ -84,7 +84,7 @@ h3.title {
 	text-align: center;
 	font-variant: normal;
 	font-family: serif;
-  vertical-align: middle;
+	vertical-align: middle;
 	margin-top: 0.75em;
 }
 
@@ -128,7 +128,7 @@ h3.new-title {
 
 h1.indicia-heading {
 	text-align: center;
-	font-size: 1em; /*small works best here rather than a specific em*/
+	font-size: 1em;
 	font-family: "Roboto Bold", sans-serif;
 	font-weight: bold;
 	margin-bottom: 1em;
@@ -136,7 +136,7 @@ h1.indicia-heading {
 
 h2.indicia-heading {
 	text-align: center;
-	font-size: 0.9em; /*small works best here rather than a specific em*/
+	font-size: 0.9em;
 	font-family: sans-serif;
 	font-style: italic;
 	font-weight: normal;
@@ -231,7 +231,7 @@ h1.subheading {
 	font-family: "Roboto Slab Bold", serif;
 	font-weight: bold;
 	margin-top: 1em;
-	margin-bottom: 0em;
+	margin-bottom: 0.1em;
 }
 
 h2.subheading {
@@ -296,7 +296,7 @@ h1.split-page {
 
 p {
 	text-indent: 1em;
-	font-family: serif;
+	font-family: "Roboto", sans-serif;
 	text-align: justify;
 	font-size: 1em;
 	margin: 0em;
@@ -305,24 +305,24 @@ p {
 }
 
 p.indicia, .indicia {
-	font-size: 0.8em !important; /*0.8em or small*/
+	font-size: 0.8em!important; /*0.8em or small*/
 	font-family: "Roboto", sans-serif;
-	text-indent: 1em !important;
+	text-indent: 1em!important;
 	font-variant-numeric: tabular-nums; /*Force cap-height proportional numbers for fonts that use default text figures such as Literata or Georgia.*/
 }
 
 p.noindent-indicia, .noindent-indicia {
-	font-size: 0.8em !important; /*0.8em or small*/
+	font-size: 0.8em!important; /*0.8em or small*/
 	font-family: "Roboto", sans-serif;
-	text-indent: 0em !important;
-	text-align: left !important;
+	text-indent: 0em!important;
+	text-align: left!important;
 	font-variant-numeric: tabular-nums; /*Force cap-height tabular numbers for fonts that use default text figures such as Literata or Georgia.*/
 }
 
 p.center-indicia, .center-indicia {
-	font-size: 0.8em !important; /*0.8em or small*/
+	font-size: 0.8em!important; /*0.8em or small*/
 	font-family: "Roboto", sans-serif;
-	text-align: center !important;
+	text-align: center!important;
 	font-variant-numeric: tabular-nums; /*Force cap-height tabular numbers for fonts that use default text figures such as Literata or Georgia.*/
 }
 
@@ -331,11 +331,11 @@ p.small-text, .small-text /*For the indicia*/ {
 }
 
 p.small {
-  font-size: 0.95em;
+	font-size: 0.95em;
 }
 
 p.noindent, .noindent /*Every starting paragraph should start with this.*/ {
-	text-indent: 0em !important;
+	text-indent: 0em!important;
 }
 
 p.top, .top {
@@ -371,8 +371,7 @@ p.left, .left {
 }
 
 p.center, .center {
-	text-align: center !important;
-	text-indent: 0em !important;
+	text-align: center!important;
 }
 
 p.right, .right {
@@ -419,45 +418,42 @@ i {
 /*Quotes are used to show a quote by a person or source. Recommended to write the quote in italics, though this isn't set in the CSS by default.*/
 
 p.noindent-quote {
-	text-align: justify;
 	text-indent: 0em;
+	font-size: 0.9em;
+	text-align: justify;
 	margin-left: 1em;
 	margin-right: 1em;
-	font-size: 0.9em;
-	font-style: normal;
 }
 
 p.quote {
-	text-align: justify;
 	text-indent: 1em;
+	font-size: 0.9em;
+	text-align: justify;
 	margin-left: 1em;
 	margin-right: 1em;
-	font-size: 0.9em;
-	font-style: normal;
 }
 
 p.quote2 {
-	text-align: justify;
 	text-indent: 2em;
+	font-size: 0.9em;
+	text-align: justify;
 	margin-left: 1em;
 	margin-right: 1em;
-	font-size: 0.9em;
-	font-style: normal;
 }
 
 /*References*/
 
 p.ref {
-  text-indent: 0em;
+	text-indent: 0em;
 	font-size: 0.9em!important;
-  margin-top: 0.5em;
+	margin-top: 0.5em;
 }
 
 ul.ref {
-  text-indent: 0em;
-  font-size: 0.9em!important;
-  margin-top: 0.2em;
-  margin-bottom: 0.5em;
+	text-indent: 0em;
+	font-size: 0.9em!important;
+	margin-top: 0.2em;
+	margin-bottom: 0.5em;
 }
 
 p.ref-noindent-quote {
@@ -472,10 +468,10 @@ p.ref-noindent-quote {
 /*Scene break*/
 
 .scene-break {
-  text-align: center;
-  font-size: 1.6em;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
+	text-align: center;
+	font-size: 1.6em;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
 }
 
 /*Book-specific paragraphs*/
@@ -513,8 +509,8 @@ span.initial-black, .initial-black {
 /*Use <span></span> tags use these for formatting the e-book’s text*/
 
 .copyright {
-  font-size: 1.1em!important;
-  font-family: sans-serif;
+	font-size: 1.1em!important;
+	font-family: sans-serif;
 }
 
 .sc /*Adds small caps to text*/ {
@@ -545,14 +541,14 @@ span.initial-black, .initial-black {
 /*Lists (Ordered and Unordered)*/
 
 ol, ul {
-  margin-top: 1em;
-  margin-bottom: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 li {
 	font-family: "Roboto", sans-serif;
 	font-variant-numeric: tabular-nums; /*Force cap-height proportional numbers for fonts that use default text figures such as Literata or Georgia.*/
- 	hyphens: none;
+	hyphens: none;
 	text-align: left;
 	margin-top: 0.25em;
 	margin-left: 0.1em;
@@ -564,7 +560,7 @@ ol.water-activity {
 }
 
 ul.nomargin, ol.nomargin {
-  margin-top: 0em!important;
+	margin-top: 0em!important;
 }
 
 p.sublist, .sublist {
@@ -639,7 +635,7 @@ tr.gta-row {
 }
 
 td.victim {
-	text-indent: 0em !important;
+	text-indent: 0em!important;
 	padding: 0.2em;
 	vertical-align: top;
 	font-size: 0.9em;
@@ -651,7 +647,7 @@ td.victim {
 }
 
 td.torniquet-col1 {
-	text-indent: 0em !important;
+	text-indent: 0em!important;
 	padding: 0.2em;
 	vertical-align: middle;
 	font-size: 0.9em;
@@ -660,7 +656,7 @@ td.torniquet-col1 {
 }
 
 td.torniquet-col2 {
-	text-indent: 0em !important;
+	text-indent: 0em!important;
 	padding: 0.2em;
 	vertical-align: middle;
 	font-size: 0.9em;
@@ -669,7 +665,7 @@ td.torniquet-col2 {
 }
 
 th {
-	text-indent: 0em !important;
+	text-indent: 0em!important;
 	padding: 0.2em;
 	margin-left: 0em;
 	margin-right: 0em;
@@ -687,7 +683,7 @@ th {
 }
 
 th.gta-heading /*Ground-to-air table*/ {
-	text-indent: 0em !important;
+	text-indent: 0em!important;
 	padding: 0.2em;
 	vertical-align: top;
 	text-align: center;
@@ -702,7 +698,7 @@ th.gta-heading /*Ground-to-air table*/ {
 }
 
 td.gta-number {
-	text-indent: 0em !important;
+	text-indent: 0em!important;
 	padding: 1em;
 	margin-left: 0em;
 	margin-right: 0em;
@@ -718,7 +714,7 @@ td.gta-number {
 }
 
 td.gta-message {
-	text-indent: 0em !important;
+	text-indent: 0em!important;
 	padding: 1em;
 	margin-left: 0em;
 	margin-right: 0em;
@@ -735,7 +731,7 @@ td.gta-message {
 
 
 td.gta-code-symbol {
-	text-indent: 0em !important;
+	text-indent: 0em!important;
 	padding: 0.5em;
 	margin-left: 0em;
 	margin-right: 0em;
@@ -769,10 +765,10 @@ td.dot-dash, .dot-dash {
 }
 
 table.indicia-table {
-  border: none;
-  width: 100%;
-  margin-top: 1em;
-  margin-bottom: 1em;
+	border: none;
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 /*Images*/
@@ -815,25 +811,25 @@ img.toc_icon {
 /*Book-specific divs*/
 
 div.title-border-outer {
-  border: solid #000 0.1em;
-  padding: 0.2em;
-  margin: 0.01em;
+	border: solid #000 0.1em;
+	padding: 0.2em;
+	margin: 0.01em;
 }
 
 div.title-border-inner {
-  border: solid #000 0.1em;
-  padding: 0.2em;
-  margin: 0.2em;
+	border: solid #000 0.1em;
+	padding: 0.2em;
+	margin: 0.2em;
 }
 
 div.title-page {
-  border-top: 0.1em;
-  border-color: #000;
-  border-style: solid;
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  margin-bottom: 0em;
+	border-top: 0.1em;
+	border-color: #000;
+	border-style: solid;
+	border-bottom: none;
+	border-left: none;
+	border-right: none;
+	margin-bottom: 0em;
 }
 
 div.greybox {
@@ -894,7 +890,7 @@ hr.heading-line {
 
 hr.short-line {
 	width: 8em;
-  height: 0em;
+	height: 0em;
 	border-style: solid;
 	border-color: #000;
 	background-color: #000;
@@ -905,13 +901,13 @@ hr.short-line {
 
 hr.table-line {
 	width: 5.5em;
-  height: 0em;
+	height: 0em;
 	border-style: solid;
 	border-color: #000;
 	background-color: #000;
 	margin-left: auto;
 	margin-right: auto;
-  margin-top: 0.1em;
+	margin-top: 0.1em;
 	margin-bottom: 0.5em;
 }
 
@@ -936,26 +932,26 @@ table.invisible {
 }
 
 table.conversion-table {
-   border: 0px;
-   width: 100%;
-   margin-top: 1em;
-   margin-bottom: 1em;
+	border: 0px;
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: 1em;
 }
 
 th.noborder-header {
-  font-weight: bold;
-  text-align: center;
-  border: none;
-  font-family: serif;
-  font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	border: none;
+	font-family: serif;
+	font-size: 1em;
 }
 
 td.noborder {
-  font-weight: normal;
+	font-weight: normal;
 	border: none;
-  text-align: left;
-  font-family: serif;
-  font-size: 0.9em;
+	text-align: left;
+	font-family: serif;
+	font-size: 0.9em;
 }
 
 p.small {
@@ -971,29 +967,29 @@ div.protip {
 }
 
 div.black-box {
-  border: 2px solid black;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-left: 3em;
-  padding-right: 3em;
+	border: 2px solid black;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-left: 3em;
+	padding-right: 3em;
 }
 
 div.newspaper-column {
-  border: 2px solid black;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  padding-top: 1em;
-  padding-left: 3em;
-  padding-right: 3em;
-  padding-bottom: 1em;
+	border: 2px solid black;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding-top: 1em;
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-bottom: 1em;
 }
 
 p.newspaper {
-  margin-left: 1.5em;
+	margin-left: 1.5em;
 }
 
 p.newspaper2 {
-  margin-left: 4.5em;
+	margin-left: 4.5em;
 }
 
 span.graynumber {
@@ -1001,20 +997,20 @@ span.graynumber {
 }
 
 sup.fraction, sub.fraction, .fraction {
-  font-size: 0.8em;
-  /*font-variant-numeric: oldstyle-nums; /*Force text figures for fonts that have them.*/
+	font-size: 0.8em;
+	/*font-variant-numeric: oldstyle-nums; /*Force text figures for fonts that have them.*/
 }
 
 span.integer {
-  margin-right: 0.13em;
+	margin-right: 0.13em;
 }
 
 span.fraction-dram {
-  margin-left: 0.2em;
+	margin-left: 0.2em;
 }
 
 p.tiny-margin {
-  margin-top: 0.2em;
+	margin-top: 0.2em;
 }
 
 /*RTL (Right-to-Left) - For Arabic, Persian, Hebrew, etc...*/

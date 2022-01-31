@@ -261,7 +261,13 @@
 						"pageNumber": "38",
 						"indentation": "1",
 						"pageName": "Appendix: Recipes for Hand Sanitizer",
-						"fileName": "appendix-handsanitizer.xhtml"
+						"fileName": "appendix-handsanitizerrecipes.xhtml"
+					},
+					{
+						"pageNumber": "39",
+						"indentation": "1",
+						"pageName": "Appendix: Using Hand Sanitizer",
+						"fileName": "appendix-usinghandsanitizer.xhtml"
 					},
 					{
 						"pageNumber": "39",

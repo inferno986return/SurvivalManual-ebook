@@ -242,21 +242,27 @@
 		<navLabel>
 			<text>Appendix: Recipes for Hand Sanitizer</text>
 		</navLabel>
-		<content src="appendix-handsanitizer.xhtml" />
+		<content src="appendix-handsanitizerrecipes.xhtml" />
 	</navPoint>
 	<navPoint id="navpoint-40" playOrder="40">
+		<navLabel>
+			<text>Appendix: Using Hand Sanitizer</text>
+		</navLabel>
+		<content src="appendix-usinghandsanitizer.xhtml" />
+	</navPoint>
+	<navPoint id="navpoint-41" playOrder="41">
 		<navLabel>
 			<text>Appendix: Frequently Asked Questions (FAQ)</text>
 		</navLabel>
 		<content src="appendix-faq.xhtml" />
 	</navPoint>
-	<navPoint id="navpoint-41" playOrder="41">
+	<navPoint id="navpoint-42" playOrder="42">
 		<navLabel>
 			<text>Appendix: Translator Notes</text>
 		</navLabel>
 		<content src="appendix-translatornotes.xhtml" />
 	</navPoint>
-	<navPoint id="navpoint-42" playOrder="42">
+	<navPoint id="navpoint-43" playOrder="43">
 		<navLabel>
 			<text>Appendix: Further Reading</text>
 		</navLabel>
