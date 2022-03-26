@@ -689,7 +689,7 @@ th.gta-heading /*Ground-to-air table*/ {
 	text-align: center;
 	page-break-inside: avoid;
 	hyphens: none;
-	font-size: 0.9em;
+	font-size: 1em;
 	color: #FFF;
 	background-color: #000;
 	font-variant-numeric: tabular-nums;
@@ -700,13 +700,12 @@ th.gta-heading /*Ground-to-air table*/ {
 td.gta-number {
 	text-indent: 0em!important;
 	padding: 1em;
-	margin-left: 0em;
-	margin-right: 0em;
+	margin: 0em;
 	vertical-align: top;
 	text-align: center;
 	page-break-inside: avoid;
 	hyphens: none;
-	font-size: 0.9em;
+	font-size: 1em;
 	border: none;
 	font-variant-numeric: tabular-nums;
 	font-family: "Roboto", sans-serif;
@@ -716,13 +715,12 @@ td.gta-number {
 td.gta-message {
 	text-indent: 0em!important;
 	padding: 1em;
-	margin-left: 0em;
-	margin-right: 0em;
+	margin: 0em;
 	vertical-align: top;
-	text-align: left;
+	text-align: center;
 	page-break-inside: avoid;
 	hyphens: none;
-	font-size: 0.9em;
+	font-size: 1em;
 	border: none;
 	font-variant-numeric: tabular-nums;
 	font-family: "Roboto", sans-serif;
