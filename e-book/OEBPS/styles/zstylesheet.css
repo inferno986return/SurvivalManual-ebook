@@ -531,7 +531,7 @@ span.initial-black, .initial-black {
 
 .acrostic /*For acrostic acronyms, to give emphasis*/ {
 	font-size: 1.2em;
-	font-family: "Roboto Bold", sans-serif;
+	font-family: "Roboto Slab Bold", sans-serif;
 	margin-right: 0.05em;
 	font-weight: bold!important;
 }
