@@ -5,7 +5,7 @@
 		<dc:subject></dc:subject>
 		<dc:publisher></dc:publisher>
 		<dc:identifier id="bookid">-</dc:identifier>
-		<dc:date>2022-04-10T17:47:38</dc:date>
+		<dc:date>2022-04-10T18:34:06</dc:date>
 		<dc:language>en</dc:language>
 		<dc:rights>worldwide</dc:rights>
 		<meta content="cover" name="cover"/>
@@ -349,23 +349,24 @@
 		<item href="images/using_hand_sanitizer/handrub-7.jpg" id="image333" media-type="image/jpeg"/>
 		<item href="images/using_hand_sanitizer/handrub-8.jpg" id="image334" media-type="image/jpeg"/>
 		<item href="images/water/fig06-03.png" id="image335" media-type="image/png"/>
-		<item href="images/water/fig06-04.png" id="image336" media-type="image/png"/>
-		<item href="images/water/fig06-05.png" id="image337" media-type="image/png"/>
-		<item href="images/water/fig06-06.png" id="image338" media-type="image/png"/>
-		<item href="images/water/fig06-07.png" id="image339" media-type="image/png"/>
-		<item href="images/water/fig06-08.png" id="image340" media-type="image/png"/>
-		<item href="images/water/fig06-09.png" id="image341" media-type="image/png"/>
-		<item href="images/water/fig06-10.png" id="image342" media-type="image/png"/>
-		<item href="images/watercrossing/fig17-01.png" id="image343" media-type="image/png"/>
-		<item href="images/watercrossing/fig17-02.png" id="image344" media-type="image/png"/>
-		<item href="images/watercrossing/fig17-03a.png" id="image345" media-type="image/png"/>
-		<item href="images/watercrossing/fig17-03b.png" id="image346" media-type="image/png"/>
-		<item href="images/watercrossing/fig17-03c.png" id="image347" media-type="image/png"/>
-		<item href="images/watercrossing/fig17-04.png" id="image348" media-type="image/png"/>
-		<item href="images/watercrossing/fig17-05.png" id="image349" media-type="image/png"/>
-		<item href="images/watercrossing/fig17-06.png" id="image350" media-type="image/png"/>
-		<item href="images/watercrossing/fig17-07.png" id="image351" media-type="image/png"/>
-		<item href="images/watercrossing/fig17-08.png" id="image352" media-type="image/png"/>
+		<item href="images/water/fig06-04a.png" id="image336" media-type="image/png"/>
+		<item href="images/water/fig06-04b.png" id="image337" media-type="image/png"/>
+		<item href="images/water/fig06-05.png" id="image338" media-type="image/png"/>
+		<item href="images/water/fig06-06.png" id="image339" media-type="image/png"/>
+		<item href="images/water/fig06-07.png" id="image340" media-type="image/png"/>
+		<item href="images/water/fig06-08.png" id="image341" media-type="image/png"/>
+		<item href="images/water/fig06-09.png" id="image342" media-type="image/png"/>
+		<item href="images/water/fig06-10.png" id="image343" media-type="image/png"/>
+		<item href="images/watercrossing/fig17-01.png" id="image344" media-type="image/png"/>
+		<item href="images/watercrossing/fig17-02.png" id="image345" media-type="image/png"/>
+		<item href="images/watercrossing/fig17-03a.png" id="image346" media-type="image/png"/>
+		<item href="images/watercrossing/fig17-03b.png" id="image347" media-type="image/png"/>
+		<item href="images/watercrossing/fig17-03c.png" id="image348" media-type="image/png"/>
+		<item href="images/watercrossing/fig17-04.png" id="image349" media-type="image/png"/>
+		<item href="images/watercrossing/fig17-05.png" id="image350" media-type="image/png"/>
+		<item href="images/watercrossing/fig17-06.png" id="image351" media-type="image/png"/>
+		<item href="images/watercrossing/fig17-07.png" id="image352" media-type="image/png"/>
+		<item href="images/watercrossing/fig17-08.png" id="image353" media-type="image/png"/>
 		<item href="bookcover.xhtml" id="bookcover" media-type="application/xhtml+xml"/>
 		<item href="indicia.xhtml" id="indicia" media-type="application/xhtml+xml"/>
 		<item href="title.xhtml" id="title" media-type="application/xhtml+xml"/>
