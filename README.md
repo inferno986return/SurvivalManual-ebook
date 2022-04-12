@@ -30,9 +30,18 @@ Most of the content will be kept the same though I plan on making minor alterati
 
 Alongside providing content from Ligi's Android app, I want to improve the content at the same time by:
 
-* Added a table of contents (TOC) because that's required for an e-book. (https://github.com/ligi/SurvivalManual/issues/92)
+* Adding a table of contents (TOC) because that's required for an e-book. (https://github.com/ligi/SurvivalManual/issues/92)
 * Cropping, transcribing and annotating the text-heavy images including removing borders (https://github.com/ligi/SurvivalManual/issues/62) - The goal is to remove text from images to make the manual easier to translate and localise. I have already completed the Signaling chapter.
-* Hand sanitiser recipe, a recipe I found on Telegram is added as a bonus chapter in the repo's "misc" folder. I have extracted the text from the WHO PDF (https://github.com/ligi/SurvivalManual/issues/97).
+* Adding hand sanitiser recipes - a recipe I found on Telegram is added as a bonus chapter in the repo's "misc" folder. I have extracted the text from the WHO PDF (https://github.com/ligi/SurvivalManual/issues/97).
+* Adding a new Morse code translation table in Apps chapter - 100% text
+* Making minor typographical improvements such as:
+    * swapping out hyphens for en dashes
+    * using bold bullets and em dashes for Morse code
+    * swapping out some bullet lists for numbered lists
+    * using Roboto Slab for the main headings etc.
+* Improving the spelling and grammar.
+* Adding prominent warning and note boxs, I'm considering adding icons in a similar manner to the Dummies books.
+* Adding a better psychology icon (this has been merged with the upstream)
 
 The icon source files are saved in the .afdesign format used by [Affinity Designer](https://affinity.serif.com/designer). I may move this over to [Inkscape](https://inkscape.org) to make the project more accessible.
 
