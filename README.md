@@ -26,7 +26,7 @@ The SAS Survival Guide is also useful for obtaining inspiration for creating eff
 
 ## What's changed?
 
-Most of the content will be kept the same though I plan on making minor alterations (see the ConversionNotes.md for more information). I have already changed the Psychology chapter icon for a more appropriate one, along with alterations to the typesetting. One image will likely be replaced with just a table.
+Most of the content will be kept the same though I plan on making minor alterations (see the ConversionNotes.md for more information). I have already changed the Psychology chapter icon for a more appropriate one (this has been merged with the upstream), along with alterations to the typesetting. One image will likely be replaced with just a table.
 
 Alongside providing content from Ligi's Android app, I want to improve the content at the same time by:
 
@@ -41,7 +41,6 @@ Alongside providing content from Ligi's Android app, I want to improve the conte
     * using Roboto Slab for the main headings etc.
 * Improving the spelling and grammar.
 * Adding prominent warning and note boxs, I'm considering adding icons in a similar manner to the Dummies books.
-* Adding a better psychology icon (this has been merged with the upstream)
 
 The icon source files are saved in the .afdesign format used by [Affinity Designer](https://affinity.serif.com/designer). I may move this over to [Inkscape](https://inkscape.org) to make the project more accessible.
 

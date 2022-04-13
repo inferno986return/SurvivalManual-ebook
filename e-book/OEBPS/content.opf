@@ -5,7 +5,7 @@
 		<dc:subject></dc:subject>
 		<dc:publisher></dc:publisher>
 		<dc:identifier id="bookid">-</dc:identifier>
-		<dc:date>2022-04-10T18:34:06</dc:date>
+		<dc:date>2022-04-12T13:02:04</dc:date>
 		<dc:language>en</dc:language>
 		<dc:rights>worldwide</dc:rights>
 		<meta content="cover" name="cover"/>
@@ -28,8 +28,8 @@
 		<item href="images/basic_medicine/fig04-04c.png" id="image12" media-type="image/png"/>
 		<item href="images/basic_medicine/fig04-04d.png" id="image13" media-type="image/png"/>
 		<item href="images/basic_medicine/fig04-04e.png" id="image14" media-type="image/png"/>
-		<item href="images/basic_medicine/fig04-05-consciousvictim.png" id="image15" media-type="image/png"/>
-		<item href="images/basic_medicine/fig04-05-unconsciousvictim.png" id="image16" media-type="image/png"/>
+		<item href="images/basic_medicine/fig04-05a.png" id="image15" media-type="image/png"/>
+		<item href="images/basic_medicine/fig04-05b.png" id="image16" media-type="image/png"/>
 		<item href="images/basic_medicine/fig04-06.png" id="image17" media-type="image/png"/>
 		<item href="images/basic_medicine/fig04-07a.png" id="image18" media-type="image/png"/>
 		<item href="images/basic_medicine/fig04-07b.png" id="image19" media-type="image/png"/>
