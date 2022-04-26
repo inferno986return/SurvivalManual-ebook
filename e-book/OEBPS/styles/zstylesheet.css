@@ -43,6 +43,15 @@ Use ems instead of percentages.
 	src: url("../fonts/RobotoSerif-Regular.ttf");
 }
 
+@font-face {
+	font-family: "Roboto Serif Bold";
+	src: url("../fonts/RobotoSerif-Bold.ttf");
+}
+
+@font-face {
+	font-family: "Roboto Serif Italic";
+	src: url("../fonts/RobotoSerif-Italic.ttf");
+}
 
 /*@font-face {
 	font-family: "Roboto Bold-Italic";
@@ -233,7 +242,7 @@ h1.indent, h2.indent {
 /*Sub Headings*/
 
 h1.subheading {
-	font-size: 1.1em;
+	font-size: 1.2em;
 	font-family: "Roboto Slab Bold", serif;
 	font-weight: bold;
 	margin-top: 1em;
@@ -241,7 +250,7 @@ h1.subheading {
 }
 
 h2.subheading {
-	font-size: 1em;
+	font-size: 1.1em;
 	font-family: "Roboto Bold", sans-serif;
 	font-weight: bold;
 	margin-top: 1em;
@@ -412,12 +421,12 @@ p.location2 {
 /*Emphasis*/
 b {
 	font-weight: bold;
-	font-family: "Roboto Bold", sans-serif;
+	font-family: "Roboto Serif Bold", sans-serif;
 }
 
 i {
 	font-style: italic;
-	font-family: "Roboto Italic", sans-serif;
+	font-family: "Roboto Serif Italic", sans-serif;
 }
 
 /*Quotes*/
