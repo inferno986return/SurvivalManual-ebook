@@ -38,6 +38,12 @@ Use ems instead of percentages.
 	src: url("../fonts/Roboto-Italic.ttf");
 }
 
+@font-face {
+	font-family: "Roboto Serif";
+	src: url("../fonts/RobotoSerif-Regular.ttf");
+}
+
+
 /*@font-face {
 	font-family: "Roboto Bold-Italic";
 	font-weight: italic;
@@ -296,7 +302,7 @@ h1.split-page {
 
 p {
 	text-indent: 1em;
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto Serif", serif;
 	text-align: justify;
 	font-size: 1em;
 	margin: 0em;
@@ -546,7 +552,7 @@ ol, ul {
 }
 
 li {
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto Serif", serif;
 	font-variant-numeric: tabular-nums; /*Force cap-height proportional numbers for fonts that use default text figures such as Literata or Georgia.*/
 	hyphens: none;
 	text-align: left;
