@@ -12,12 +12,12 @@ Use ems instead of percentages.
 /*Fonts*/
 
 @font-face {
-	font-family: "Roboto Slab Regular";	
+	font-family: "Roboto Slab Regular";
 	src: url("../fonts/RobotoSlab-Regular.ttf");
 }
 
 @font-face {
-	font-family: "Roboto Slab Bold";	
+	font-family: "Roboto Slab Bold";
 	src: url("../fonts/RobotoSlab-Bold.ttf");
 }
 
@@ -398,7 +398,7 @@ p.serif, .serif {
 }
 
 p.sans, .sans {
-	font-family: sans-serif;
+	font-family: "Roboto", sans-serif;
 }
 
 p.mono, .mono {
@@ -713,7 +713,7 @@ th.gta-heading /*Ground-to-air table*/ {
 	background-color: #000;
 	font-variant-numeric: tabular-nums;
 	font-family: "Roboto Bold", sans-serif;
-	font-weight: bold;	
+	font-weight: bold;
 }
 
 td.gta-number {
@@ -728,7 +728,7 @@ td.gta-number {
 	border: none;
 	font-variant-numeric: tabular-nums;
 	font-family: "Roboto", sans-serif;
-	font-weight: normal;	
+	font-weight: normal;
 }
 
 td.gta-message {
@@ -743,7 +743,7 @@ td.gta-message {
 	border: none;
 	font-variant-numeric: tabular-nums;
 	font-family: "Roboto", sans-serif;
-	font-weight: normal;	
+	font-weight: normal;
 }
 
 
@@ -760,7 +760,7 @@ td.gta-code-symbol {
 	border: none;
 	font-variant-numeric: tabular-nums;
 	font-family: "Roboto", sans-serif;
-	font-weight: normal;	
+	font-weight: normal;
 }
 
 td.vmiddle {
