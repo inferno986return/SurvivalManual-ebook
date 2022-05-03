@@ -578,6 +578,10 @@ ul.nomargin, ol.nomargin {
 	margin-top: 0em!important;
 }
 
+li.table-li {
+	margin-left: -1.1em;
+}
+
 p.sublist, .sublist {
 	margin: 0em;
 }
