@@ -544,6 +544,11 @@ span.initial-black, .initial-black {
 	font-family: "jb_mono_regular", monospace;
 }
 
+.note, .caution, .warning {
+	font-family: "Roboto Bold", sans-serif;
+	font-weight: bold;
+}
+
 .acrostic /*For acrostic acronyms, to give emphasis*/ {
 	font-size: 1.2em;
 	font-family: "Roboto Slab Bold", sans-serif;
@@ -620,7 +625,7 @@ td {
 	font-size: 0.9em;
 	border: solid #000 2px;
 	font-variant-numeric: tabular-nums;
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto Serif", serif;
 }
 
 td.diagram-left {
@@ -773,11 +778,12 @@ td.vbottom {
 
 td.morse {
 	font-size: 1em;
+	font-family: "Roboto Serif", serif;
 }
 
 td.dot-dash, .dot-dash {
 	font-size: 1.1em;
-	font-family: "Roboto Bold", sans-serif;
+	font-family: "Roboto Serif", serif;
 	font-weight: bold;
 }
 
