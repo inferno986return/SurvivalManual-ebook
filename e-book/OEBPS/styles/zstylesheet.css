@@ -732,7 +732,7 @@ td.gta-number {
 	font-size: 1em;
 	border: none;
 	font-variant-numeric: tabular-nums;
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto Serif", serif;
 	font-weight: normal;
 }
 
@@ -747,7 +747,7 @@ td.gta-message {
 	font-size: 1em;
 	border: none;
 	font-variant-numeric: tabular-nums;
-	font-family: "Roboto", sans-serif;
+	font-family: "Roboto Serif", serif;
 	font-weight: normal;
 }
 
