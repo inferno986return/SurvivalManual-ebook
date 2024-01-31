@@ -27,7 +27,16 @@
 		"language": "en",
 		"rights": "worldwide",
 
-		"comment4": "This is the page order that the e-book has. The first number before the colon is the page order, the second is the indentation (default is 1, allowed upto 4), third is the page name and fourth is file itself.",
+		"comment4": "This specifies the tags used by Amazon Kindle's start reading, the table of contents and the front cover using the <guide></guide> tags. Optional and enable it.",
+		"enableGuide": "true",
+		"startReadingfile": "introduction.xhtml",
+		"startReadingpage": "Introduction",
+		"tocFile": "toc.xhtml",
+		"tocPage": "Contents.xhtml",
+		"frontCoverfile": "bookcover.xhtml",
+		"frontCoverpage": "Front Cover",
+
+		"comment5": "This is the page order that the e-book has. The first number before the colon is the page order, the second is the indentation (default is 1, allowed upto 4), third is the page name and fourth is file itself.",
 		"pages": [
 					{
 						"pageNumber": "0",

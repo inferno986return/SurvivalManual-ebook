@@ -7,24 +7,20 @@
 #opf = "OEBPS/content.opf"
 #ncx = "OEBPS/toc.ncx"
 
-import os
-import datetime, time
-import json
+import os, datetime, time, json, zipfile, hashlib, re
 from collections import OrderedDict
-import re
-import zipfile
-import hashlib
 
 #Intro text
-print()
-print("================================================")
-print("ebookbuild, v0.8115 - Copyright (C) 2021 Hal Motley")
-print("https://www.github.com/inferno986return/ebookbuild/")
-print()
-print("This program comes with ABSOLUTELY NO WARRANTY, for details see GPL-3.txt.")
-print("This is free software and you are welcome to redistribute it under certain conditions.")
-print("================================================")
-print()
+print(f"""
+================================================
+ebookbuild, v0.82 - Copyright (C) 2021 Hal Motley
+https://www.github.com/inferno986return/ebookbuild/
+================================================
+
+This program comes with ABSOLUTELY NO WARRANTY, for details see GPL-3.txt.
+This is free software and you are welcome to redistribute it under certain conditions.
+
+""")
 
 #JSON extraction magic
 with open("metadata.json") as json_file:
@@ -48,6 +44,7 @@ def GenOPF():
     opf.write('\t\t<dc:date>' + utctime + '</dc:date>\n') #Date and time using ISO 8601 to ensure a unique checksum (YYYY-MM-DDThh:mm:ss)
     opf.write('\t\t<dc:language>' + data["language"] + '</dc:language>\n')
     opf.write('\t\t<dc:rights>' + data["rights"] + '</dc:rights>\n')
+    opf.write('\t\t<dc:description>' + data["description"] + '</dc:description>\n')
     opf.write('\t\t<meta content="cover" name="cover"/>\n')
 
     #Fixed (non-reflowable) support
@@ -198,6 +195,17 @@ def GenOPF():
         currentpage += 1
 
     opf.write('\t</spine>\n')
+
+    #Write the guide tags - need to make these optional
+    if data["enableGuide"] == "true":
+        opf.write('\t<guide>\n')
+        opf.write('\t\t<reference type="text" ' + 'href="' + data["startReadingfile"] + '" ' + 'title="' + data["startReadingpage"] + '"/>\n')
+        # <reference type="text" href="pages/page001.html" title="Front Page"/>
+        opf.write('\t\t<reference type="toc" ' + 'href="' + data["tocFile"] + '" ' + 'title="' + data["tocPage"] + '"/>\n')
+        # <reference type="toc" href="pages/page005.html" title="Contents"/>
+        opf.write('\t\t<reference type="cover" ' + 'href="' + data["frontCoverfile"] + '" ' + 'title="' + data["frontCoverpage"] + '"/>\n')
+        # <reference type="cover" href="titlepage.xhtml" title="Cover"/>
+        opf.write('\t</guide>\n')
 
     #End of file
     opf.write('</package>')
