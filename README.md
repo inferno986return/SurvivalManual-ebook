@@ -62,7 +62,7 @@ I use Visual Studio Code and formerly Atom to edit the XHTML, CSS and JSON files
 
 ### Compilation
 
-The e-book metadata is added to the metadata.json file which is used by ebookbuild script to compile the book.
+The e-book metadata is added to the metadata.json file which is used by the `ebookbuild` script to compile the book.
 
 When I have finished the e-book it can be compiled. To compile the ePub, you will need to install both [Python 3](https://www.python.org/) to create the ePub and the [Java Development Kit (JDK)](https://www.oracle.com/uk/java/technologies/javase-downloads.html) to run epubcheck to verify it is up to standard.
 

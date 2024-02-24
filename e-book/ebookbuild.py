@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-#ebookbuild.py v0.8115 - Generates an ePub file using data from the metadata.json.
+#ebookbuild.py v0.82.1 - Generates an ePub file using data from the metadata.json.
 
 #This file is part of the ebookbuild project (also known as Project Zylon) which is licensed under GNU General Public License v3.0 (GNU GPLv3): https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -13,7 +13,7 @@ from collections import OrderedDict
 #Intro text
 print(f"""
 ================================================
-ebookbuild, v0.82 - Copyright (C) 2021 Hal Motley
+ebookbuild, v0.82.1 - Copyright (C) 2021 Hal Motley
 https://www.github.com/inferno986return/ebookbuild/
 ================================================
 
@@ -29,6 +29,8 @@ with open("metadata.json") as json_file:
 #Create a compatible content.opf from scratch.
 def GenOPF():
     utctime = datetime.datetime.utcnow().replace(microsecond=0).isoformat()
+    reflowable = ["Reflowable", "reflowable", "reflow", "r"]
+    fixed_layout = ["Fixed layout", "Fixed Layout", "fixed layout", "fixed", "f"]
 
     opf = open(data["containerFolder"] + os.sep + "content.opf", "w", encoding="utf-8")
     opf.write('<?xml version="1.0" encoding="UTF-8" standalone="no"?>')
@@ -48,10 +50,10 @@ def GenOPF():
     opf.write('\t\t<meta content="cover" name="cover"/>\n')
 
     #Fixed (non-reflowable) support
-    if (data["textPresentation"] == "Reflowable" or data["textPresentation"] == "reflowable" or data["textPresentation"] == "reflow"):
+    if (data["textPresentation"] in reflowable):
         print('e-book type: Reflowable')
 
-    elif (data["textPresentation"] == "Fixed layout" or data["textPresentation"] == "Fixed Layout" or data["textPresentation"] == "fixed layout" or data["textPresentation"] == "fixed"):
+    elif (data["textPresentation"] in fixed_layout):
         opf.write('\t\t<meta name="fixed-layout" content="true"/>\n')
         print('e-book type: Fixed layout')
 
