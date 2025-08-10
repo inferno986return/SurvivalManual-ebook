@@ -67,260 +67,176 @@
 
 		"comment7": "This is the page order that the e-book has. The first number before the colon is the page order, the second is the indentation (default is 1, allowed upto 4), third is the page name and fourth is file itself.",
 		"pages": [
-        {
-            "type": "cover",
-            "pageName": "Front Cover",
-            "fileName": "frontcover.xhtml"
-        },
+       				{
+            			"type": "cover",
+            			"pageName": "Front Cover",
+            			"fileName": "bookcover.xhtml"
+        			},
 					{
-						"pageNumber": "1",
-						"indentation": "1",
 						"pageName": "Indicia",
 						"fileName": "indicia.xhtml"
 					},
 					{
-						"pageNumber": "2",
-						"indentation": "1",
 						"pageName": "Title",
 						"fileName": "title.xhtml"
 					},
 					{
-						"pageNumber": "3",
-						"indentation": "1",
 						"pageName": "Epigraph",
 						"fileName": "epigraph.xhtml"
 					},
 					{
-						"pageNumber": "4",
-						"indentation": "1",
 						"pageName": "Contents",
 						"fileName": "toc.xhtml"
 					},
 					{
-						"pageNumber": "5",
-						"indentation": "1",
 						"pageName": "Foreword",
 						"fileName": "foreword.xhtml"
 					},
 					{
-						"pageNumber": "6",
-						"indentation": "1",
 						"pageName": "Introduction",
 						"fileName": "introduction.xhtml"
 					},
 					{
-						"pageNumber": "7",
-						"indentation": "1",
 						"pageName": "Psychology",
 						"fileName": "psychology.xhtml"
 					},
 					{
-						"pageNumber": "8",
-						"indentation": "1",
 						"pageName": "Power",
 						"fileName": "power.xhtml"
 					},
 					{
-						"pageNumber": "9",
-						"indentation": "1",
 						"pageName": "Planning",
 						"fileName": "planning.xhtml"
 					},
 					{
-						"pageNumber": "10",
-						"indentation": "1",
 						"pageName": "Kits",
 						"fileName": "kits.xhtml"
 					},
 					{
-						"pageNumber": "11",
-						"indentation": "1",
 						"pageName": "Apps",
 						"fileName": "apps.xhtml"
 					},
 					{
-						"pageNumber": "12",
-						"indentation": "1",
 						"pageName": "Basic Medicine",
 						"fileName": "basicmedicine.xhtml"
 					},
 					{
-						"pageNumber": "13",
-						"indentation": "1",
 						"pageName": "Shelter",
 						"fileName": "shelter.xhtml"
 					},
 					{
-						"pageNumber": "14",
-						"indentation": "1",
 						"pageName": "Water Procurement",
 						"fileName": "water.xhtml"
 					},
 					{
-						"pageNumber": "15",
-						"indentation": "1",
 						"pageName": "Firecraft",
 						"fileName": "firecraft.xhtml"
 					},
 					{
-						"pageNumber": "16",
-						"indentation": "1",
 						"pageName": "Food Procurement",
 						"fileName": "food.xhtml"
 					},
 					{
-						"pageNumber": "17",
-						"indentation": "1",
 						"pageName": "Plants",
 						"fileName": "plants.xhtml"
 					},
 					{
-						"pageNumber": "18",
-						"indentation": "1",
 						"pageName": "Dangerous Animals",
 						"fileName": "animals.xhtml"
 					},
 					{
-						"pageNumber": "19",
-						"indentation": "1",
 						"pageName": "Tools and Equipment",
 						"fileName": "tools.xhtml"
 					},
 					{
-						"pageNumber": "20",
-						"indentation": "1",
 						"pageName": "Desert",
 						"fileName": "desert.xhtml"
 					},
 					{
-						"pageNumber": "21",
-						"indentation": "1",
 						"pageName": "Tropical",
 						"fileName": "tropical.xhtml"
 					},
 					{
-						"pageNumber": "22",
-						"indentation": "1",
 						"pageName": "Cold Weather",
 						"fileName": "coldweather.xhtml"
 					},
 					{
-						"pageNumber": "23",
-						"indentation": "1",
 						"pageName": "Sea",
 						"fileName": "sea.xhtml"
 					},
 					{
-						"pageNumber": "24",
-						"indentation": "1",
 						"pageName": "Expedient Water Crossing",
 						"fileName": "watercrossing.xhtml"
 					},
 					{
-						"pageNumber": "25",
-						"indentation": "1",
 						"pageName": "Field-Expedient Direction Finding",
 						"fileName": "directionfinding.xhtml"
 					},
 					{
-						"pageNumber": "26",
-						"indentation": "1",
 						"pageName": "Signaling Techniques",
 						"fileName": "signaling.xhtml"
 					},
 					{
-						"pageNumber": "27",
-						"indentation": "1",
 						"pageName": "Self-Defense",
 						"fileName": "self-defense.xhtml"
 					},
 					{
-						"pageNumber": "28",
-						"indentation": "1",
 						"pageName": "Hostile Areas",
 						"fileName": "hostileareas.xhtml"
 					},
 					{
-						"pageNumber": "29",
-						"indentation": "1",
 						"pageName": "Camouflage",
 						"fileName": "camouflage.xhtml"
 					},
 					{
-						"pageNumber": "30",
-						"indentation": "1",
 						"pageName": "Contact with People",
 						"fileName": "contactpeople.xhtml"
 					},
 					{
-						"pageNumber": "31",
-						"indentation": "1",
 						"pageName": "Man-Made Hazards",
 						"fileName": "manmadehazards.xhtml"
 					},
 					{
-						"pageNumber": "32",
-						"indentation": "1",
 						"pageName": "Credits",
 						"fileName": "credits.xhtml"
 					},
 					{
-						"pageNumber": "33",
-						"indentation": "1",
 						"pageName": "Appendix: Poisonous Plants",
 						"fileName": "appendix-poisonousplants.xhtml"
 					},
 					{
-						"pageNumber": "34",
-						"indentation": "1",
 						"pageName": "Appendix: Dangerous Arthropods",
 						"fileName": "appendix-dangerousarthropods.xhtml"
 					},
 					{
-						"pageNumber": "35",
-						"indentation": "1",
 						"pageName": "Appendix: Dangerous Fish and Mollusks",
 						"fileName": "appendix-dangerousfishmollusks.xhtml"
 					},
 					{
-						"pageNumber": "36",
-						"indentation": "1",
 						"pageName": "Appendix: Ropes and Knots",
 						"fileName": "appendix-ropesandknots.xhtml"
 					},
 					{
-						"pageNumber": "37",
-						"indentation": "1",
 						"pageName": "Appendix: MultiTools",
 						"fileName": "appendix-multitool.xhtml"
 					},
 					{
-						"pageNumber": "38",
-						"indentation": "1",
 						"pageName": "Appendix: Recipes for Hand Sanitizer",
 						"fileName": "appendix-handsanitizerrecipes.xhtml"
 					},
 					{
-						"pageNumber": "39",
-						"indentation": "1",
 						"pageName": "Appendix: Using Hand Sanitizer",
 						"fileName": "appendix-usinghandsanitizer.xhtml"
 					},
 					{
-						"pageNumber": "39",
-						"indentation": "1",
 						"pageName": "Appendix: Frequently Asked Questions (FAQ)",
 						"fileName": "appendix-faq.xhtml"
 					},
 					{
-						"pageNumber": "40",
-						"indentation": "1",
 						"pageName": "Appendix: Translator Notes",
 						"fileName": "appendix-translatornotes.xhtml"
 					},
 					{
-						"pageNumber": "41",
-						"indentation": "1",
 						"pageName": "Appendix: Further Reading",
 						"fileName": "appendix-furtherreading.xhtml"
 					}
