@@ -4,7 +4,7 @@
 
 # This file is part of the ebookbuild project (also known as Project Zylon) which is licensed under GNU General Public License v3.0 (GNU GPLv3): https://www.gnu.org/licenses/gpl-3.0.en.html
 
-import os, datetime, zipfile, hashlib, re
+import os, datetime, zipfile, hashlib
 import orjson
 from lxml import etree
 
@@ -12,7 +12,7 @@ from lxml import etree
 print(
     """
 ======================================================
-ebookbuild 3.3, v1.4 - Copyright (C) 2025 Hal Motley
+ebookbuild 3.3, v1.5 - Copyright (C) 2025 Hal Motley
 https://www.github.com/inferno986return/ebookbuild/
 ======================================================
 
@@ -41,9 +41,9 @@ except FileNotFoundError:
 
 def create_page_id(filename):
     """Generates a clean, consistent ID from a page filename."""
+    # This simplified version creates unique IDs like "0100", "0200", etc.
     page_id = filename.split('#')[0].replace(".xhtml", "").replace(".html", "")
-    page_id = re.sub(r"^\d+", "", page_id)
-    page_id = re.sub(r"-", "", page_id)
+    page_id = page_id.replace("-", "")
     return page_id
 
 def GenOPF(output_dir, data):
@@ -53,11 +53,11 @@ def GenOPF(output_dir, data):
     nsmap = {"dc": "http://purl.org/dc/elements/1.1/", None: "http://www.idpf.org/2007/opf"}
     package = etree.Element("package", attrib={"unique-identifier": "bookid", "version": "3.0"}, nsmap=nsmap)
     
+    # --- METADATA (No changes needed) ---
     metadata = etree.SubElement(package, "metadata")
     etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}identifier", id="bookid").text = data["ISBN"]
     etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}title").text = data["title"]
     
-    # Process creators
     i = 1
     while True:
         creator_key = f"creator{i}"
@@ -71,7 +71,6 @@ def GenOPF(output_dir, data):
         else:
             break
 
-    # Process contributors
     i = 1
     while True:
         contrib_key = f"contributor{i}"
@@ -92,7 +91,6 @@ def GenOPF(output_dir, data):
         etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}date").text = data["date"]
     
     if data.get("sourceUrn") and data.get("sourceISBN"):
-        # We construct the URN based on the provided type and value
         urn_type = data["sourceUrn"].lower()
         source_id = data["sourceISBN"]
         source_urn = f"urn:{urn_type}:{source_id}"
@@ -104,66 +102,74 @@ def GenOPF(output_dir, data):
     if ("collection" in data and
         data["collection"].get("enableCollection") == "true" and
         all(k in data["collection"] for k in ["name", "type", "position"])):
-        
         collection_data = data["collection"]
-        
         etree.SubElement(metadata, "meta", property="belongs-to-collection", id="collection").text = collection_data["name"]
         etree.SubElement(metadata, "meta", refines="#collection", property="collection-type").text = collection_data["type"]
         etree.SubElement(metadata, "meta", refines="#collection", property="group-position").text = str(collection_data["position"])
-
         if collection_data.get("fileAs"):
-             etree.SubElement(metadata, "meta", refines="#collection", property="file-as").text = collection_data["fileAs"]
-        
+            etree.SubElement(metadata, "meta", refines="#collection", property="file-as").text = collection_data["fileAs"]
         if collection_data.get("alternativeScript"):
-             etree.SubElement(metadata, "meta", refines="#collection", property="alternate-script").text = collection_data["alternativeScript"]
+            etree.SubElement(metadata, "meta", refines="#collection", property="alternate-script").text = collection_data["alternativeScript"]
 
     etree.SubElement(metadata, "meta", name="cover", content="cover-image")
 
+    # --- MANIFEST & SPINE GENERATION ---
     manifest = etree.SubElement(package, "manifest")
-    etree.SubElement(manifest, "item", id="nav", href=data["navDocFile"], **{"media-type": "application/xhtml+xml", "properties": "nav"})
-    if data.get("enableNcx") == "true":
-        etree.SubElement(manifest, "item", id="ncx", href="toc.ncx", **{"media-type": "application/x-dtbncx+xml"})
-        
-    added_files = set()
-    for page in data["pages"]:
-        base_filename = page["fileName"].split('#')[0]
-        if base_filename not in added_files:
-            page_id = create_page_id(base_filename)
-            etree.SubElement(manifest, "item", id=page_id, href=base_filename, **{"media-type": "application/xhtml+xml"})
-            added_files.add(base_filename)
-
-    for folder_key, ext_map, media_prefix in [
-        ("cssFolder", {".css": "text/css"}, "css"),
-        ("imagesFolder", {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".gif": "image/gif"}, "img"),
-        ("fontsFolder", {".ttf": "font/truetype", ".otf": "font/opentype", ".woff": "font/woff", ".woff2": "font/woff2"}, "font")
-    ]:
-        folder_path = os.path.join(output_dir, data.get(folder_key, folder_key.lower()))
-        if os.path.exists(folder_path):
-            idx = 0
-            for file in sorted(os.listdir(folder_path)):
-                ext = os.path.splitext(file)[1].lower()
-                if ext in ext_map:
-                    item_id = "cover-image" if file == data["epubCover"] else f"{media_prefix}{idx}"
-                    attrs = {"id": item_id, "href": f"{data[folder_key]}/{file}", "media-type": ext_map[ext]}
-                    if file == data["epubCover"]:
-                        attrs["properties"] = "cover-image"
-                    etree.SubElement(manifest, "item", **attrs)
-                    if file != data["epubCover"]:
-                        idx += 1
-
     spine_attrs = {}
     if data.get("enableNcx") == "true":
         spine_attrs['toc'] = 'ncx'
     spine = etree.SubElement(package, "spine", **spine_attrs)
+
+    # Add navigation documents
+    etree.SubElement(manifest, "item", id="nav", href=data["navDocFile"], **{"media-type": "application/xhtml+xml", "properties": "nav"})
+    if data.get("enableNcx") == "true":
+        etree.SubElement(manifest, "item", id="ncx", href="toc.ncx", **{"media-type": "application/x-dtbncx+xml"})
     
-    added_idrefs = set()
+    # OPTIMIZED: Process pages for manifest and spine in a single pass
+    xhtml_idx = 0
+    seen_filenames = set()
     for page in data["pages"]:
-        page_id = create_page_id(page["fileName"])
-        if page_id not in added_idrefs:
+        base_filename = page["fileName"].split('#')[0]
+        if base_filename not in seen_filenames:
+            page_id = f"xhtml{xhtml_idx}"
+            
+            # Add to manifest
+            etree.SubElement(manifest, "item", id=page_id, href=base_filename, **{"media-type": "application/xhtml+xml"})
+            
+            # Add to spine
             itemref = etree.SubElement(spine, "itemref", idref=page_id)
             if page.get("type") == "cover":
                 itemref.set("linear", "no")
-            added_idrefs.add(page_id)
+            
+            seen_filenames.add(base_filename)
+            xhtml_idx += 1
+
+    # Process asset files (CSS, images, fonts) with per-type counters
+    asset_counters = {}
+    for folder_key, ext_map in [
+        ("cssFolder", {".css": "text/css"}),
+        ("imagesFolder", {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".gif": "image/gif"}),
+        ("fontsFolder", {".ttf": "font/truetype", ".otf": "font/opentype", ".woff": "font/woff", ".woff2": "font/woff2"})
+    ]:
+        folder_name = data.get(folder_key)
+        if folder_name:
+            folder_path = os.path.join(output_dir, folder_name)
+            if os.path.exists(folder_path):
+                for file in sorted(os.listdir(folder_path)):
+                    ext = os.path.splitext(file)[1].lower()
+                    if ext in ext_map:
+                        if file == data["epubCover"]:
+                            item_id = "cover-image"
+                        else:
+                            prefix = ext.strip('.')
+                            idx = asset_counters.get(prefix, 0)
+                            item_id = f"{prefix}{idx}"
+                            asset_counters[prefix] = idx + 1
+                        
+                        attrs = {"id": item_id, "href": f"{folder_name}/{file}", "media-type": ext_map[ext]}
+                        if file == data["epubCover"]:
+                            attrs["properties"] = "cover-image"
+                        etree.SubElement(manifest, "item", **attrs)
 
     tree = etree.ElementTree(package)
     output_path = os.path.join(output_dir, "content.opf")
