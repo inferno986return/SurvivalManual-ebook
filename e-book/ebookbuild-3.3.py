@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# ebookbuild.py v1.3 - Generates an EPUB 3.3 file using data from metadata.json, now with lxml and orjson.
+# ebookbuild.py v1.4.1 - Generates an EPUB 3.3 file using data from metadata.json, now with lxml and orjson.
 
 # This file is part of the ebookbuild project (also known as Project Zylon) which is licensed under GNU General Public License v3.0 (GNU GPLv3): https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -12,7 +12,7 @@ from lxml import etree
 print(
     """
 ======================================================
-ebookbuild 3.3, v1.5 - Copyright (C) 2025 Hal Motley
+ebookbuild 3.3, v1.4.1 - Copyright (C) 2025 Hal Motley
 https://www.github.com/inferno986return/ebookbuild/
 ======================================================
 
@@ -53,7 +53,7 @@ def GenOPF(output_dir, data):
     nsmap = {"dc": "http://purl.org/dc/elements/1.1/", None: "http://www.idpf.org/2007/opf"}
     package = etree.Element("package", attrib={"unique-identifier": "bookid", "version": "3.0"}, nsmap=nsmap)
     
-    # --- METADATA (No changes needed) ---
+    # --- FULL METADATA BLOCK (RESTORED) ---
     metadata = etree.SubElement(package, "metadata")
     etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}identifier", id="bookid").text = data["ISBN"]
     etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}title").text = data["title"]
@@ -125,51 +125,48 @@ def GenOPF(output_dir, data):
     if data.get("enableNcx") == "true":
         etree.SubElement(manifest, "item", id="ncx", href="toc.ncx", **{"media-type": "application/x-dtbncx+xml"})
     
-    # OPTIMIZED: Process pages for manifest and spine in a single pass
-    xhtml_idx = 0
+    # === STEP 1: Process XHTML pages for manifest and spine ===
     seen_filenames = set()
-    for page in data["pages"]:
+    for idx, page in enumerate(data["pages"]):
         base_filename = page["fileName"].split('#')[0]
         if base_filename not in seen_filenames:
-            page_id = f"xhtml{xhtml_idx}"
-            
-            # Add to manifest
+            page_id = f"xhtml{idx}"
             etree.SubElement(manifest, "item", id=page_id, href=base_filename, **{"media-type": "application/xhtml+xml"})
-            
-            # Add to spine
             itemref = etree.SubElement(spine, "itemref", idref=page_id)
             if page.get("type") == "cover":
                 itemref.set("linear", "no")
-            
             seen_filenames.add(base_filename)
-            xhtml_idx += 1
-
-    # Process asset files (CSS, images, fonts) with per-type counters
+            
+    # === STEP 2: Process all other asset files (unified approach) ===
+    SUPPORTED_ASSETS = {
+        ".css": "text/css", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png",
+        ".gif": "image/gif", ".svg": "image/svg+xml", ".webp": "image/webp", ".ttf": "font/truetype",
+        ".otf": "font/opentype", ".woff": "font/woff", ".woff2": "font/woff2", ".mp3": "audio/mpeg",
+        ".mp4": "video/mp4", ".m4a": "audio/mp4", ".m4v": "video/mp4", ".opus": "audio/opus",
+        ".pls": "application/pls+xml", ".smil": "application/smil+xml"
+    }
     asset_counters = {}
-    for folder_key, ext_map in [
-        ("cssFolder", {".css": "text/css"}),
-        ("imagesFolder", {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".gif": "image/gif"}),
-        ("fontsFolder", {".ttf": "font/truetype", ".otf": "font/opentype", ".woff": "font/woff", ".woff2": "font/woff2"})
-    ]:
-        folder_name = data.get(folder_key)
-        if folder_name:
-            folder_path = os.path.join(output_dir, folder_name)
-            if os.path.exists(folder_path):
-                for file in sorted(os.listdir(folder_path)):
-                    ext = os.path.splitext(file)[1].lower()
-                    if ext in ext_map:
-                        if file == data["epubCover"]:
-                            item_id = "cover-image"
-                        else:
-                            prefix = ext.strip('.')
-                            idx = asset_counters.get(prefix, 0)
-                            item_id = f"{prefix}{idx}"
-                            asset_counters[prefix] = idx + 1
-                        
-                        attrs = {"id": item_id, "href": f"{folder_name}/{file}", "media-type": ext_map[ext]}
-                        if file == data["epubCover"]:
-                            attrs["properties"] = "cover-image"
-                        etree.SubElement(manifest, "item", **attrs)
+    
+    for dirpath, _, filenames in os.walk(output_dir):
+        for file in sorted(filenames):
+            ext = os.path.splitext(file)[1].lower()
+            
+            if ext in SUPPORTED_ASSETS:
+                full_file_path = os.path.join(dirpath, file)
+                href_path = os.path.relpath(full_file_path, output_dir).replace(os.sep, '/')
+                
+                if file == data["epubCover"]:
+                    item_id = "cover-image"
+                else:
+                    prefix = ext.strip('.')
+                    idx = asset_counters.get(prefix, 0)
+                    item_id = f"{prefix}{idx}"
+                    asset_counters[prefix] = idx + 1
+                
+                attrs = {"id": item_id, "href": href_path, "media-type": SUPPORTED_ASSETS[ext]}
+                if file == data["epubCover"]:
+                    attrs["properties"] = "cover-image"
+                etree.SubElement(manifest, "item", **attrs)
 
     tree = etree.ElementTree(package)
     output_path = os.path.join(output_dir, "content.opf")
@@ -359,16 +356,18 @@ def GenChksum(data):
         
     checksum_output = f"""
 -This output is saved to checksums.txt-
+
 WARNING: MD5 is cryptographically weak. Use SHA-256 or SHA-512 instead.
 Checksum values for {epub_filename} on {str(utctime)} UTC
 ==========================================================
+
 MD5: {md5.hexdigest()}
 SHA-256: {sha256.hexdigest()}
 SHA-512: {sha512.hexdigest()}
 """
     print(checksum_output)
     with open("checksums.txt", "w") as chksum:
-        chksum.write(checksum_output.strip())
+        chksum.write(checksum_output)
 
 def GenMetainf(data):
     """Runs the main build process for the e-book."""
