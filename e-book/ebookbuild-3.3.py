@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# ebookbuild.py v1.4.1 - Generates an EPUB 3.3 file using data from metadata.json, now with lxml and orjson.
+# ebookbuild.py v1.4.2 - Generates an EPUB 3.3 file using data from metadata.json, now with lxml and orjson.
 
 # This file is part of the ebookbuild project (also known as Project Zylon) which is licensed under GNU General Public License v3.0 (GNU GPLv3): https://www.gnu.org/licenses/gpl-3.0.en.html
 
@@ -12,7 +12,7 @@ from lxml import etree
 print(
     """
 ======================================================
-ebookbuild 3.3, v1.4.1 - Copyright (C) 2025 Hal Motley
+ebookbuild 3.3, v1.4.3 - Copyright (C) 2025 Hal Motley
 https://www.github.com/inferno986return/ebookbuild/
 ======================================================
 
@@ -50,14 +50,23 @@ def GenOPF(output_dir, data):
     """Generate the content.opf file for EPUB 3.3."""
     print("Generating content.opf...")
     utctime = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
-    nsmap = {"dc": "http://purl.org/dc/elements/1.1/", None: "http://www.idpf.org/2007/opf"}
+
+    nsmap = {
+        "dc": "http://purl.org/dc/elements/1.1/",
+        None: "http://www.idpf.org/2007/opf"
+    }
+
     package = etree.Element("package", attrib={"unique-identifier": "bookid", "version": "3.0"}, nsmap=nsmap)
-    
-    # --- FULL METADATA BLOCK (RESTORED) ---
     metadata = etree.SubElement(package, "metadata")
-    etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}identifier", id="bookid").text = data["ISBN"]
+
+    # --- METADATA ---
+    # Identifier with refinement for ISBN
+    identifier_el = etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}identifier", id="bookid")
+    identifier_el.text = data["ISBN"]
+    etree.SubElement(metadata, "meta", refines="#bookid", property="identifier-type", scheme="xsd:string").text = "ISBN"
+
     etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}title").text = data["title"]
-    
+
     i = 1
     while True:
         creator_key = f"creator{i}"
@@ -83,22 +92,23 @@ def GenOPF(output_dir, data):
             i += 1
         else:
             break
-            
+
     etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}publisher").text = data["publisher"]
     etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}language").text = data["language"]
     etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}rights").text = data["rights"]
+
     if data.get("date"):
         etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}date").text = data["date"]
-    
+
     if data.get("sourceUrn") and data.get("sourceISBN"):
         urn_type = data["sourceUrn"].lower()
         source_id = data["sourceISBN"]
         source_urn = f"urn:{urn_type}:{source_id}"
         etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}source").text = source_urn
-    
+
     etree.SubElement(metadata, "{http://purl.org/dc/elements/1.1/}description").text = data["description"]
     etree.SubElement(metadata, "meta", property="dcterms:modified").text = utctime
-    
+
     if ("collection" in data and
         data["collection"].get("enableCollection") == "true" and
         all(k in data["collection"] for k in ["name", "type", "position"])):
@@ -113,60 +123,96 @@ def GenOPF(output_dir, data):
 
     etree.SubElement(metadata, "meta", name="cover", content="cover-image")
 
-    # --- MANIFEST & SPINE GENERATION ---
-    manifest = etree.SubElement(package, "manifest")
-    spine_attrs = {}
-    if data.get("enableNcx") == "true":
-        spine_attrs['toc'] = 'ncx'
-    spine = etree.SubElement(package, "spine", **spine_attrs)
 
-    # Add navigation documents
-    etree.SubElement(manifest, "item", id="nav", href=data["navDocFile"], **{"media-type": "application/xhtml+xml", "properties": "nav"})
-    if data.get("enableNcx") == "true":
-        etree.SubElement(manifest, "item", id="ncx", href="toc.ncx", **{"media-type": "application/x-dtbncx+xml"})
-    
-    # === STEP 1: Process XHTML pages for manifest and spine ===
-    seen_filenames = set()
-    for idx, page in enumerate(data["pages"]):
-        base_filename = page["fileName"].split('#')[0]
-        if base_filename not in seen_filenames:
-            page_id = f"xhtml{idx}"
-            etree.SubElement(manifest, "item", id=page_id, href=base_filename, **{"media-type": "application/xhtml+xml"})
-            itemref = etree.SubElement(spine, "itemref", idref=page_id)
-            if page.get("type") == "cover":
-                itemref.set("linear", "no")
-            seen_filenames.add(base_filename)
-            
-    # === STEP 2: Process all other asset files (unified approach) ===
+    # --- THE ELEGANT ARCHITECTURE: MANIFEST & SPINE ---
+
+    # 1. Asset Definitions
     SUPPORTED_ASSETS = {
+        ".xhtml": "application/xhtml+xml", ".html": "application/xhtml+xml",
         ".css": "text/css", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png",
         ".gif": "image/gif", ".svg": "image/svg+xml", ".webp": "image/webp", ".ttf": "font/truetype",
         ".otf": "font/opentype", ".woff": "font/woff", ".woff2": "font/woff2", ".mp3": "audio/mpeg",
         ".mp4": "video/mp4", ".m4a": "audio/mp4", ".m4v": "video/mp4", ".opus": "audio/opus",
         ".pls": "application/pls+xml", ".smil": "application/smil+xml"
     }
+
+    # 2. Build the File Registry (Single Source of Truth)
+    manifest_registry = {}  # Maps filepath -> unique_id
     asset_counters = {}
     
+    # Pre-register reserved IDs mapping to your metadata
+    manifest_registry[data["navDocFile"]] = "nav"
+    if data.get("enableNcx") == "true":
+        manifest_registry["toc.ncx"] = "ncx"
+
+    # Extract the cover filename to search for it during the walk
+    epub_cover_filename = data.get("epubCover")
+
+    # Walk the directory ONCE to index all actual files
     for dirpath, _, filenames in os.walk(output_dir):
         for file in sorted(filenames):
             ext = os.path.splitext(file)[1].lower()
-            
             if ext in SUPPORTED_ASSETS:
-                full_file_path = os.path.join(dirpath, file)
-                href_path = os.path.relpath(full_file_path, output_dir).replace(os.sep, '/')
+                href_path = os.path.relpath(os.path.join(dirpath, file), output_dir).replace(os.sep, '/')
                 
-                if file == data["epubCover"]:
-                    item_id = "cover-image"
+                if href_path not in manifest_registry:
+                    # Automatically find the cover image regardless of what subfolder it is in
+                    if epub_cover_filename and file == epub_cover_filename:
+                        manifest_registry[href_path] = "cover-image"
+                    else:
+                        # Assign dynamic IDs for everything else
+                        prefix = ext.strip('.')
+                        idx = asset_counters.get(prefix, 0)
+                        manifest_registry[href_path] = f"{prefix}{idx}"
+                        asset_counters[prefix] = idx + 1
+
+    # 3. Generate Manifest using the Registry
+    manifest = etree.SubElement(package, "manifest")
+    for href, item_id in manifest_registry.items():
+        ext = os.path.splitext(href)[1].lower()
+        
+        # Determine media-type (handling ncx override)
+        media_type = "application/x-dtbncx+xml" if item_id == "ncx" else SUPPORTED_ASSETS.get(ext, "application/xhtml+xml")
+        
+        attrs = {"id": item_id, "href": href, "media-type": media_type}
+        
+        if item_id == "nav":
+            attrs["properties"] = "nav"
+        elif item_id == "cover-image":
+            attrs["properties"] = "cover-image"
+            
+        etree.SubElement(manifest, "item", **attrs)
+
+    # 4. Generate Spine by querying the Registry
+    spine_attrs = {}
+    if data.get("enableNcx") == "true":
+        spine_attrs['toc'] = 'ncx'
+        
+    spine = etree.SubElement(package, "spine", **spine_attrs)
+
+    seen_spine_items = set()
+
+    def process_spine_items(items):
+        for item in items:
+            base_filename = item["fileName"].split('#')[0]
+            
+            if base_filename not in seen_spine_items:
+                item_id = manifest_registry.get(base_filename)
+                if item_id:
+                    itemref = etree.SubElement(spine, "itemref", idref=item_id)
+                    if item.get("type") == "cover":
+                        itemref.set("linear", "no")
                 else:
-                    prefix = ext.strip('.')
-                    idx = asset_counters.get(prefix, 0)
-                    item_id = f"{prefix}{idx}"
-                    asset_counters[prefix] = idx + 1
+                    print(f"  -> WARNING: Spine item '{base_filename}' missing from output folder. Excluded from OPF.")
                 
-                attrs = {"id": item_id, "href": href_path, "media-type": SUPPORTED_ASSETS[ext]}
-                if file == data["epubCover"]:
-                    attrs["properties"] = "cover-image"
-                etree.SubElement(manifest, "item", **attrs)
+                seen_spine_items.add(base_filename)
+            
+            # Recursively process nested subheadings so they get added to the spine
+            if "subheadings" in item and item["subheadings"]:
+                process_spine_items(item["subheadings"])
+
+    # Trigger the function starting with the main pages array
+    process_spine_items(data["pages"])
 
     tree = etree.ElementTree(package)
     output_path = os.path.join(output_dir, "content.opf")
@@ -354,12 +400,12 @@ def GenChksum(data):
         sha256.update(buffer)
         sha512.update(buffer)
         
-    checksum_output = f"""
--This output is saved to checksums.txt-
+    checksum_output = f"""-This output is saved to checksums.txt-
 
 WARNING: MD5 is cryptographically weak. Use SHA-256 or SHA-512 instead.
+
 Checksum values for {epub_filename} on {str(utctime)} UTC
-==========================================================
+=======================================================================
 
 MD5: {md5.hexdigest()}
 SHA-256: {sha256.hexdigest()}
@@ -393,16 +439,16 @@ def GenMetainf(data):
         print("\nAll tasks completed successfully!")
     
     except FileNotFoundError as e:
-        print("\n" + "="*60)
+        print("\n" + "="*70)
         print(">>> A FILE NOT FOUND ERROR OCCURRED! SCRIPT HALTED. <<<")
         print(f"DETAILS: {e}")
-        print("="*60 + "\n")
+        print("="*70 + "\n")
     except Exception as e:
-        print("\n" + "="*60)
+        print("\n" + "="*70)
         print(">>> AN UNEXPECTED ERROR OCCURRED! SCRIPT HALTED. <<<")
         print(f"ERROR TYPE: {type(e).__name__}")
         print(f"DETAILS: {e}")
-        print("="*60 + "\n")
+        print("="*70 + "\n")
         
 # Main execution block
 if __name__ == "__main__":
